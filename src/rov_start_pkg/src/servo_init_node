@@ -1,11 +1,12 @@
-#include<rov_start_pkg/headfile.h>
+#include"rov_start_pkg/headfile.h"
+#include "rov_start_pkg/init_msg.h"
 #include<ros/ros.h>
 
 
-#define device "servo"
+#define DEVICE_NAME "servo"
 
 void feedback(const rov_start_pkg::init_msg::ConstPtr& msg){
-    ROS_INFO("%s received self_check request.",device);
+    ROS_INFO("%s received self_check request.",DEVICE_NAME);
 }
 bool servo_communication(){//ping舵机。ping通了返回ture
     ROS_INFO("Servo_init_node has recieved initial command\n");
@@ -19,24 +20,23 @@ int main(int argc,char** argv){
     ros::Subscriber init_sub=nh.subscribe("init_msg_re",10,feedback);
     
     ros::Rate rate(1);
-    ros::Subscriber init_sub=nh.subscribe("init_msg",10,feedback);
 
-    rov_start_pkg::init_msgs init_re;
+    rov_start_pkg::init_msg init_re;
     while(ros::ok()){
         if(servo_communication()){
             init_re.success=true;
-            init_re.module_name=device;
+            init_re.module_name=DEVICE_NAME;
             init_pub.publish(init_re);
             break;
         }
         else{
-            init_re.module_name=device;
+            init_re.module_name=DEVICE_NAME;
             init_re.success=false;
             init_pub.publish(init_re);
         }
         init_pub.publish(init_re);
 
-        ros::spinOnce();
+        ros::spin();
         rate.sleep();
     }
     return 0;

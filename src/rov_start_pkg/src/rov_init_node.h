@@ -1,5 +1,5 @@
-#include<string>
-string module_name[100];
-module_name[]={
-    
-}
+#include<iostream>
+class init_status{
+    bool command=false;
+    bool success=false;
+};

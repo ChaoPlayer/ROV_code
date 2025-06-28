@@ -7,12 +7,10 @@
             },
             "includePath": [
                 "/opt/ros/noetic/include/**",
-                "/home/a/桌面/auv_ws/src/auv_control/include/**",
-                "/home/a/mavros_try_ws/src/get_pkg/include/**",
-                "/home/a/rov_ws/src/rov_start_pkg/include/**",
-                "/home/a/mavros_try_ws/src/send_pkg/include/**",
                 "/usr/include/**",
-                "${workspaceFolder}/src/rov_start_pkg/include"
+                "${workspaceFolder}/src/rov_start_pkg/include",
+                "${workspaceFolder}/devel/include/**",
+                "${workspaceFolder}/devel/include"
             ],
             "name": "ROS",
             "intelliSenseMode": "gcc-x64",
