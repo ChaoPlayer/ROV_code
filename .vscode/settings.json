@@ -6,6 +6,8 @@
         "/opt/ros/noetic/lib/python3/dist-packages"
     ],
     "files.associations": {
-        "string": "cpp"
-    }
+        "string": "cpp",
+        "servo_init_node": "cpp"
+    },
+    "cmake.sourceDirectory": "/home/a/rov_ws/src/rov_start_pkg"
 }

@@ -2,7 +2,7 @@
 #include "rov_start_pkg/init_msgs.h"
 #include "rov_init_node.h"
 
-void msg_set(rov_start_pkg::init_msgs init_msgs){
+void msg_set(rov_start_pkg::init_msgs init_msgs,init_status status){
     init_msg.command=true;
     init_msg.success=false;
 
@@ -16,12 +16,14 @@ int main(int argc,char **argv){
     int success_count=0;
     int module_id;
 
+    init_status status;
     while(ros::ok()){
         rov_start_pkg::init_msgs init_msg;
         init_msg.command=true;
         init_msg.success=false;
 
         pub.publish(init_msg);
-        ROS_INFO("")
+        ROS_INFO("Init message has been published");
+
     }
 }

@@ -12,8 +12,7 @@
                 "/home/a/rov_ws/src/rov_start_pkg/include/**",
                 "/home/a/mavros_try_ws/src/send_pkg/include/**",
                 "/usr/include/**",
-                "${workspaceFolder}/src/rov_start_pkg/include",
-                "~/rov_ws/devel/include/**"
+                "${workspaceFolder}/src/rov_start_pkg/include"
             ],
             "name": "ROS",
             "intelliSenseMode": "gcc-x64",
