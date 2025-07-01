@@ -22,3 +22,6 @@
 #include<sensor_msgs/Joy.h>
 
 #include<serial/serial.h>
+
+#include<map>
+#include<string>

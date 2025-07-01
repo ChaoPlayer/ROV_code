@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/a/rov_ws/devel/share/gennodejs/ros/rov_start_pkg/msg/init_msg.js"
+  "/home/chao/ROV_code/devel/share/gennodejs/ros/rov_start_pkg/msg/init_msg.js"
   "CMakeFiles/rov_start_pkg_generate_messages_nodejs"
 )
 

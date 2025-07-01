@@ -27,13 +27,13 @@ struct init_msg_
     : command(false)
     , success(false)
     , module_name()
-    , check_status()  {
+    , check_status(false)  {
     }
   init_msg_(const ContainerAllocator& _alloc)
     : command(false)
     , success(false)
     , module_name(_alloc)
-    , check_status(_alloc)  {
+    , check_status(false)  {
   (void)_alloc;
     }
 
@@ -48,7 +48,7 @@ struct init_msg_
    typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _module_name_type;
   _module_name_type module_name;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _check_status_type;
+   typedef uint8_t _check_status_type;
   _check_status_type check_status;
 
 
@@ -140,12 +140,12 @@ struct MD5Sum< ::rov_start_pkg::init_msg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "9f9d638df57cb716038d935691df8db0";
+    return "d2995b634e846547e16a64fc61dda91c";
   }
 
   static const char* value(const ::rov_start_pkg::init_msg_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x9f9d638df57cb716ULL;
-  static const uint64_t static_value2 = 0x038d935691df8db0ULL;
+  static const uint64_t static_value1 = 0xd2995b634e846547ULL;
+  static const uint64_t static_value2 = 0xe16a64fc61dda91cULL;
 };
 
 template<class ContainerAllocator>
@@ -167,7 +167,7 @@ struct Definition< ::rov_start_pkg::init_msg_<ContainerAllocator> >
     return "bool command\n"
 "bool success\n"
 "string module_name\n"
-"string check_status\n"
+"bool check_status\n"
 ;
   }
 
@@ -208,14 +208,22 @@ struct Printer< ::rov_start_pkg::init_msg_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::rov_start_pkg::init_msg_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "command: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.command);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "success: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.success);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "module_name: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.module_name);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "check_status: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.check_status);
+    Printer<uint8_t>::stream(s, indent + "  ", v.check_status);
   }
 };
 

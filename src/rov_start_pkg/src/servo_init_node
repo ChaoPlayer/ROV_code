@@ -17,24 +17,24 @@ int main(int argc,char** argv){
     ros::NodeHandle nh;
 
     ros::Publisher init_pub=nh.advertise<rov_start_pkg::init_msg>("init_check_re",10);
-    ros::Subscriber init_sub=nh.subscribe("init_msg_re",10,feedback);
+    
     
     ros::Rate rate(1);
 
-    rov_start_pkg::init_msg init_re;
+    rov_start_pkg::init_msg init_re;//创建回复消息变量init_re
     while(ros::ok()){
+        ros::Subscriber init_sub=nh.subscribe("init_check",10,feedback);//从自检中心节点订阅请求
         if(servo_communication()){
             init_re.success=true;
             init_re.module_name=DEVICE_NAME;
-            init_pub.publish(init_re);
+            init_pub.publish(init_re);//检测到成功了再发送消息到回复话题中
             break;
         }
         else{
             init_re.module_name=DEVICE_NAME;
             init_re.success=false;
-            init_pub.publish(init_re);
         }
-        init_pub.publish(init_re);
+        //init_pub.publish(init_re);
 
         ros::spin();
         rate.sleep();

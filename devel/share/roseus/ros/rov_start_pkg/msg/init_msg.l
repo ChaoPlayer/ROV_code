@@ -22,13 +22,13 @@
     ((:command __command) nil)
     ((:success __success) nil)
     ((:module_name __module_name) "")
-    ((:check_status __check_status) "")
+    ((:check_status __check_status) nil)
     )
    (send-super :init)
    (setq _command __command)
    (setq _success __success)
    (setq _module_name (string __module_name))
-   (setq _check_status (string __check_status))
+   (setq _check_status __check_status)
    self)
   (:command
    (&optional (__command :null))
@@ -40,8 +40,8 @@
    (&optional __module_name)
    (if __module_name (setq _module_name __module_name)) _module_name)
   (:check_status
-   (&optional __check_status)
-   (if __check_status (setq _check_status __check_status)) _check_status)
+   (&optional (__check_status :null))
+   (if (not (eq __check_status :null)) (setq _check_status __check_status)) _check_status)
   (:serialization-length
    ()
    (+
@@ -51,8 +51,8 @@
     1
     ;; string _module_name
     4 (length _module_name)
-    ;; string _check_status
-    4 (length _check_status)
+    ;; bool _check_status
+    1
     ))
   (:serialize
    (&optional strm)
@@ -64,8 +64,8 @@
        (if _success (write-byte -1 s) (write-byte 0 s))
      ;; string _module_name
        (write-long (length _module_name) s) (princ _module_name s)
-     ;; string _check_status
-       (write-long (length _check_status) s) (princ _check_status s)
+     ;; bool _check_status
+       (if _check_status (write-byte -1 s) (write-byte 0 s))
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
@@ -76,24 +76,24 @@
      (setq _success (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;; string _module_name
      (let (n) (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4) (setq _module_name (subseq buf ptr- (+ ptr- n))) (incf ptr- n))
-   ;; string _check_status
-     (let (n) (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4) (setq _check_status (subseq buf ptr- (+ ptr- n))) (incf ptr- n))
+   ;; bool _check_status
+     (setq _check_status (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;;
    self)
   )
 
-(setf (get rov_start_pkg::init_msg :md5sum-) "9f9d638df57cb716038d935691df8db0")
+(setf (get rov_start_pkg::init_msg :md5sum-) "d2995b634e846547e16a64fc61dda91c")
 (setf (get rov_start_pkg::init_msg :datatype-) "rov_start_pkg/init_msg")
 (setf (get rov_start_pkg::init_msg :definition-)
       "bool command
 bool success
 string module_name
-string check_status
+bool check_status
 
 ")
 
 
 
-(provide :rov_start_pkg/init_msg "9f9d638df57cb716038d935691df8db0")
+(provide :rov_start_pkg/init_msg "d2995b634e846547e16a64fc61dda91c")
 
 

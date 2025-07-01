@@ -46,7 +46,7 @@ class init_msg {
         this.check_status = initObj.check_status
       }
       else {
-        this.check_status = '';
+        this.check_status = false;
       }
     }
   }
@@ -60,7 +60,7 @@ class init_msg {
     // Serialize message field [module_name]
     bufferOffset = _serializer.string(obj.module_name, buffer, bufferOffset);
     // Serialize message field [check_status]
-    bufferOffset = _serializer.string(obj.check_status, buffer, bufferOffset);
+    bufferOffset = _serializer.bool(obj.check_status, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -75,15 +75,14 @@ class init_msg {
     // Deserialize message field [module_name]
     data.module_name = _deserializer.string(buffer, bufferOffset);
     // Deserialize message field [check_status]
-    data.check_status = _deserializer.string(buffer, bufferOffset);
+    data.check_status = _deserializer.bool(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
     let length = 0;
     length += _getByteLength(object.module_name);
-    length += _getByteLength(object.check_status);
-    return length + 10;
+    return length + 7;
   }
 
   static datatype() {
@@ -93,7 +92,7 @@ class init_msg {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '9f9d638df57cb716038d935691df8db0';
+    return 'd2995b634e846547e16a64fc61dda91c';
   }
 
   static messageDefinition() {
@@ -102,7 +101,7 @@ class init_msg {
     bool command
     bool success
     string module_name
-    string check_status
+    bool check_status
     
     `;
   }
@@ -138,7 +137,7 @@ class init_msg {
       resolved.check_status = msg.check_status;
     }
     else {
-      resolved.check_status = ''
+      resolved.check_status = false
     }
 
     return resolved;

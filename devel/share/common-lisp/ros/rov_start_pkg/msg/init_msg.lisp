@@ -25,8 +25,8 @@
    (check_status
     :reader check_status
     :initarg :check_status
-    :type cl:string
-    :initform ""))
+    :type cl:boolean
+    :initform cl:nil))
 )
 
 (cl:defclass init_msg (<init_msg>)
@@ -66,12 +66,7 @@
     (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_str_len) ostream))
   (cl:map cl:nil #'(cl:lambda (c) (cl:write-byte (cl:char-code c) ostream)) (cl:slot-value msg 'module_name))
-  (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'check_status))))
-    (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_str_len) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_str_len) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_str_len) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_str_len) ostream))
-  (cl:map cl:nil #'(cl:lambda (c) (cl:write-byte (cl:char-code c) ostream)) (cl:slot-value msg 'check_status))
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'check_status) 1 0)) ostream)
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <init_msg>) istream)
   "Deserializes a message object of type '<init_msg>"
@@ -85,14 +80,7 @@
       (cl:setf (cl:slot-value msg 'module_name) (cl:make-string __ros_str_len))
       (cl:dotimes (__ros_str_idx __ros_str_len msg)
         (cl:setf (cl:char (cl:slot-value msg 'module_name) __ros_str_idx) (cl:code-char (cl:read-byte istream)))))
-    (cl:let ((__ros_str_len 0))
-      (cl:setf (cl:ldb (cl:byte 8 0) __ros_str_len) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 8) __ros_str_len) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 16) __ros_str_len) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 24) __ros_str_len) (cl:read-byte istream))
-      (cl:setf (cl:slot-value msg 'check_status) (cl:make-string __ros_str_len))
-      (cl:dotimes (__ros_str_idx __ros_str_len msg)
-        (cl:setf (cl:char (cl:slot-value msg 'check_status) __ros_str_idx) (cl:code-char (cl:read-byte istream)))))
+    (cl:setf (cl:slot-value msg 'check_status) (cl:not (cl:zerop (cl:read-byte istream))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<init_msg>)))
@@ -103,22 +91,22 @@
   "rov_start_pkg/init_msg")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<init_msg>)))
   "Returns md5sum for a message object of type '<init_msg>"
-  "9f9d638df57cb716038d935691df8db0")
+  "d2995b634e846547e16a64fc61dda91c")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'init_msg)))
   "Returns md5sum for a message object of type 'init_msg"
-  "9f9d638df57cb716038d935691df8db0")
+  "d2995b634e846547e16a64fc61dda91c")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<init_msg>)))
   "Returns full string definition for message of type '<init_msg>"
-  (cl:format cl:nil "bool command~%bool success~%string module_name~%string check_status~%~%~%"))
+  (cl:format cl:nil "bool command~%bool success~%string module_name~%bool check_status~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'init_msg)))
   "Returns full string definition for message of type 'init_msg"
-  (cl:format cl:nil "bool command~%bool success~%string module_name~%string check_status~%~%~%"))
+  (cl:format cl:nil "bool command~%bool success~%string module_name~%bool check_status~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <init_msg>))
   (cl:+ 0
      1
      1
      4 (cl:length (cl:slot-value msg 'module_name))
-     4 (cl:length (cl:slot-value msg 'check_status))
+     1
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <init_msg>))
   "Converts a ROS message object to a list"

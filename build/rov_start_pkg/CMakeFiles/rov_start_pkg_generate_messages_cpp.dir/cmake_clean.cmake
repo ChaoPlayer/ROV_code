@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/a/rov_ws/devel/include/rov_start_pkg/init_msg.h"
+  "/home/chao/ROV_code/devel/include/rov_start_pkg/init_msg.h"
   "CMakeFiles/rov_start_pkg_generate_messages_cpp"
 )
 

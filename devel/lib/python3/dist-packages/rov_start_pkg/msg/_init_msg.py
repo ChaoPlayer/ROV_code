@@ -8,16 +8,16 @@ import struct
 
 
 class init_msg(genpy.Message):
-  _md5sum = "9f9d638df57cb716038d935691df8db0"
+  _md5sum = "d2995b634e846547e16a64fc61dda91c"
   _type = "rov_start_pkg/init_msg"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """bool command
 bool success
 string module_name
-string check_status
+bool check_status
 """
   __slots__ = ['command','success','module_name','check_status']
-  _slot_types = ['bool','bool','string','string']
+  _slot_types = ['bool','bool','string','bool']
 
   def __init__(self, *args, **kwds):
     """
@@ -43,12 +43,12 @@ string check_status
       if self.module_name is None:
         self.module_name = ''
       if self.check_status is None:
-        self.check_status = ''
+        self.check_status = False
     else:
       self.command = False
       self.success = False
       self.module_name = ''
-      self.check_status = ''
+      self.check_status = False
 
   def _get_types(self):
     """
@@ -71,11 +71,7 @@ string check_status
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self.check_status
-      length = len(_x)
-      if python3 or type(_x) == unicode:
-        _x = _x.encode('utf-8')
-        length = len(_x)
-      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
+      buff.write(_get_struct_B().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -104,14 +100,9 @@ string check_status
       else:
         self.module_name = str[start:end]
       start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      start = end
-      end += length
-      if python3:
-        self.check_status = str[start:end].decode('utf-8', 'rosmsg')
-      else:
-        self.check_status = str[start:end]
+      end += 1
+      (self.check_status,) = _get_struct_B().unpack(str[start:end])
+      self.check_status = bool(self.check_status)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -133,11 +124,7 @@ string check_status
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self.check_status
-      length = len(_x)
-      if python3 or type(_x) == unicode:
-        _x = _x.encode('utf-8')
-        length = len(_x)
-      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
+      buff.write(_get_struct_B().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -167,14 +154,9 @@ string check_status
       else:
         self.module_name = str[start:end]
       start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      start = end
-      end += length
-      if python3:
-        self.check_status = str[start:end].decode('utf-8', 'rosmsg')
-      else:
-        self.check_status = str[start:end]
+      end += 1
+      (self.check_status,) = _get_struct_B().unpack(str[start:end])
+      self.check_status = bool(self.check_status)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -189,3 +171,9 @@ def _get_struct_2B():
     if _struct_2B is None:
         _struct_2B = struct.Struct("<2B")
     return _struct_2B
+_struct_B = None
+def _get_struct_B():
+    global _struct_B
+    if _struct_B is None:
+        _struct_B = struct.Struct("<B")
+    return _struct_B
