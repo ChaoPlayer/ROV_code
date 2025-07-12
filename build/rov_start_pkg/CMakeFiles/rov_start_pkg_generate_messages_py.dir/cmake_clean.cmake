@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/chao/ROV_code/devel/lib/python3/dist-packages/rov_start_pkg/msg/__init__.py"
-  "/home/chao/ROV_code/devel/lib/python3/dist-packages/rov_start_pkg/msg/_init_msg.py"
+  "/home/a/ROV_code/devel/lib/python3/dist-packages/rov_start_pkg/msg/__init__.py"
+  "/home/a/ROV_code/devel/lib/python3/dist-packages/rov_start_pkg/msg/_init_msg.py"
   "CMakeFiles/rov_start_pkg_generate_messages_py"
 )
 

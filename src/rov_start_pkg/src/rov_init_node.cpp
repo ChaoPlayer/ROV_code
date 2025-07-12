@@ -28,7 +28,7 @@ int main(int argc,char **argv){
     int module_id;
 
     init_status status;
-    over_time=0;//进主循环后超时计时器开始计时，如果发现了有效自检就重置一次
+    int over_time=0;//进主循环后超时计时器开始计时，如果发现了有效自检就重置一次
     while(ros::ok()){
         rov_start_pkg::init_msg init_msg;//定义自检节点消息变量
         init_msg.module_name="center";//防止各个消息搞混，这是请求消息

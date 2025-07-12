@@ -21,7 +21,8 @@
 
 #include<sensor_msgs/Joy.h>
 
-#include<serial/serial.h>
+#include<libserial/SerialPort.h>
+#include<libserial/SerialStream.h>
 
 #include<map>
 #include<string>

@@ -85,7 +85,11 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp",
-        "slist": "cpp"
+        "slist": "cpp",
+        "charconv": "cpp",
+        "cuchar": "cpp",
+        "netfwd": "cpp",
+        "rope": "cpp"
     },
     "cmake.sourceDirectory": "/home/chao/ROV_code/src/rov_start_pkg"
 }

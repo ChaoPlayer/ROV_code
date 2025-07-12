@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/chao/ROV_code/devel/share/roseus/ros/rov_start_pkg/manifest.l"
-  "/home/chao/ROV_code/devel/share/roseus/ros/rov_start_pkg/msg/init_msg.l"
+  "/home/a/ROV_code/devel/share/roseus/ros/rov_start_pkg/manifest.l"
+  "/home/a/ROV_code/devel/share/roseus/ros/rov_start_pkg/msg/init_msg.l"
   "CMakeFiles/rov_start_pkg_generate_messages_eus"
 )
 

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chao/ROV_code/src
+CMAKE_SOURCE_DIR = /home/a/ROV_code/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chao/ROV_code/build
+CMAKE_BINARY_DIR = /home/a/ROV_code/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chao/ROV_code/build/CMakeFiles /home/chao/ROV_code/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/a/ROV_code/build/CMakeFiles /home/a/ROV_code/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chao/ROV_code/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/a/ROV_code/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -363,6 +363,19 @@ rov_start_pkg_gencpp/fast:
 .PHONY : rov_start_pkg_gencpp/fast
 
 #=============================================================================
+# Target rules for targets named rov_init_node
+
+# Build rule for target.
+rov_init_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rov_init_node
+.PHONY : rov_init_node
+
+# fast build rule for target.
+rov_init_node/fast:
+	$(MAKE) -f rov_start_pkg/CMakeFiles/rov_init_node.dir/build.make rov_start_pkg/CMakeFiles/rov_init_node.dir/build
+.PHONY : rov_init_node/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_py
 
 # Build rule for target.
@@ -387,6 +400,19 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 std_msgs_generate_messages_lisp/fast:
 	$(MAKE) -f rov_start_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make rov_start_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named servo_init_node
+
+# Build rule for target.
+servo_init_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 servo_init_node
+.PHONY : servo_init_node
+
+# fast build rule for target.
+servo_init_node/fast:
+	$(MAKE) -f rov_start_pkg/CMakeFiles/servo_init_node.dir/build.make rov_start_pkg/CMakeFiles/servo_init_node.dir/build
+.PHONY : servo_init_node/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_nodejs
@@ -663,8 +689,10 @@ help:
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... rov_start_pkg_gencpp"
+	@echo "... rov_init_node"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... servo_init_node"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... rov_start_pkg_gennodejs"
