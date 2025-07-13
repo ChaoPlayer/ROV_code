@@ -1,8 +1,8 @@
-prefix=/home/a/ROV_code/devel
+prefix=/home/chao/ROV_code/devel
 
 Name: rov_start_pkg
 Description: Description of rov_start_pkg
 Version: 0.0.0
-Cflags: -I/home/a/ROV_code/devel/include -I/home/a/ROV_code/src/rov_start_pkg/include -I/usr/include/serial
+Cflags: -I/home/chao/ROV_code/devel/include -I/home/chao/ROV_code/src/rov_start_pkg/include
 Libs: -L${prefix}/lib -lrov_start_pkg
 Requires: roscpp rospy std_msgs message_runtime serial

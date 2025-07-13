@@ -13,7 +13,7 @@ add_message_files(FILES init_msg.msg)
 generate_messages(DEPENDENCIES std_msgs)
 
 catkin_package(
-  INCLUDE_DIRS include /usr/include/serial
+  INCLUDE_DIRS include 
   LIBRARIES rov_start_pkg
   CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
   DEPENDS serial
@@ -22,7 +22,6 @@ catkin_package(
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
-  /usr/include/serial
 )
 
 add_executable(rov_init_node src/rov_init_node.cpp)

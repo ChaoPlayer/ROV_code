@@ -1,8 +1,8 @@
-# Install script for directory: /home/a/ROV_code/src
+# Install script for directory: /home/chao/ROV_code/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/a/ROV_code/install")
+  set(CMAKE_INSTALL_PREFIX "/home/chao/ROV_code/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,89 +49,104 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/a/ROV_code/install/_setup_util.py")
+   "/home/chao/ROV_code/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/a/ROV_code/install" TYPE PROGRAM FILES "/home/a/ROV_code/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/chao/ROV_code/install" TYPE PROGRAM FILES "/home/chao/ROV_code/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/a/ROV_code/install/env.sh")
+   "/home/chao/ROV_code/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/a/ROV_code/install" TYPE PROGRAM FILES "/home/a/ROV_code/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/chao/ROV_code/install" TYPE PROGRAM FILES "/home/chao/ROV_code/build/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/a/ROV_code/install/setup.bash;/home/a/ROV_code/install/local_setup.bash")
+   "/home/chao/ROV_code/install/setup.bash;/home/chao/ROV_code/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/a/ROV_code/install" TYPE FILE FILES
-    "/home/a/ROV_code/build/catkin_generated/installspace/setup.bash"
-    "/home/a/ROV_code/build/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/home/chao/ROV_code/install" TYPE FILE FILES
+    "/home/chao/ROV_code/build/catkin_generated/installspace/setup.bash"
+    "/home/chao/ROV_code/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/a/ROV_code/install/setup.sh;/home/a/ROV_code/install/local_setup.sh")
+   "/home/chao/ROV_code/install/setup.sh;/home/chao/ROV_code/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/a/ROV_code/install" TYPE FILE FILES
-    "/home/a/ROV_code/build/catkin_generated/installspace/setup.sh"
-    "/home/a/ROV_code/build/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/home/chao/ROV_code/install" TYPE FILE FILES
+    "/home/chao/ROV_code/build/catkin_generated/installspace/setup.sh"
+    "/home/chao/ROV_code/build/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/a/ROV_code/install/setup.zsh;/home/a/ROV_code/install/local_setup.zsh")
+   "/home/chao/ROV_code/install/setup.zsh;/home/chao/ROV_code/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/a/ROV_code/install" TYPE FILE FILES
-    "/home/a/ROV_code/build/catkin_generated/installspace/setup.zsh"
-    "/home/a/ROV_code/build/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/home/chao/ROV_code/install" TYPE FILE FILES
+    "/home/chao/ROV_code/build/catkin_generated/installspace/setup.zsh"
+    "/home/chao/ROV_code/build/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/a/ROV_code/install/.rosinstall")
+   "/home/chao/ROV_code/install/setup.fish;/home/chao/ROV_code/install/local_setup.fish")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/a/ROV_code/install" TYPE FILE FILES "/home/a/ROV_code/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/chao/ROV_code/install" TYPE FILE FILES
+    "/home/chao/ROV_code/build/catkin_generated/installspace/setup.fish"
+    "/home/chao/ROV_code/build/catkin_generated/installspace/local_setup.fish"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/chao/ROV_code/install/.rosinstall")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/chao/ROV_code/install" TYPE FILE FILES "/home/chao/ROV_code/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/a/ROV_code/build/gtest/cmake_install.cmake")
-  include("/home/a/ROV_code/build/rov_start_pkg/cmake_install.cmake")
+  include("/home/chao/ROV_code/build/gtest/cmake_install.cmake")
+  include("/home/chao/ROV_code/build/rov_start_pkg/cmake_install.cmake")
 
 endif()
 
@@ -143,5 +158,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/a/ROV_code/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/chao/ROV_code/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

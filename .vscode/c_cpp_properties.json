@@ -10,7 +10,8 @@
                 "/usr/include/**",
                 "${workspaceFolder}/src/rov_start_pkg/include",
                 "${workspaceFolder}/devel/include/**",
-                "${workspaceFolder}/devel/include"
+                "${workspaceFolder}/devel/include",
+                "/opt/ros/noetic/include"
             ],
             "name": "ROS",
             "intelliSenseMode": "gcc-x64",
