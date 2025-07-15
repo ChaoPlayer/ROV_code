@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/chao/ROV_code/build'
+export PWD='/home/a/ROV_code/build'

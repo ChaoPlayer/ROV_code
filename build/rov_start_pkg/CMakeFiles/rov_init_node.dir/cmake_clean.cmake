@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/chao/ROV_code/devel/lib/rov_start_pkg/rov_init_node"
-  "/home/chao/ROV_code/devel/lib/rov_start_pkg/rov_init_node.pdb"
+  "/home/a/ROV_code/devel/lib/rov_start_pkg/rov_init_node"
+  "/home/a/ROV_code/devel/lib/rov_start_pkg/rov_init_node.pdb"
   "CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o"
 )
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chao/ROV_code/src
+CMAKE_SOURCE_DIR = /home/a/ROV_code/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chao/ROV_code/build
+CMAKE_BINARY_DIR = /home/a/ROV_code/build
 
 # Utility rule file for std_msgs_generate_messages_py.
 
@@ -63,10 +63,10 @@ headfile_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build: std_msgs_genera
 .PHONY : headfile_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build
 
 headfile_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
-	cd /home/chao/ROV_code/build/headfile_pkg && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/a/ROV_code/build/headfile_pkg && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : headfile_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 
 headfile_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/depend:
-	cd /home/chao/ROV_code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chao/ROV_code/src /home/chao/ROV_code/src/headfile_pkg /home/chao/ROV_code/build /home/chao/ROV_code/build/headfile_pkg /home/chao/ROV_code/build/headfile_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/a/ROV_code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/a/ROV_code/src /home/a/ROV_code/src/headfile_pkg /home/a/ROV_code/build /home/a/ROV_code/build/headfile_pkg /home/a/ROV_code/build/headfile_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : headfile_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/depend
 

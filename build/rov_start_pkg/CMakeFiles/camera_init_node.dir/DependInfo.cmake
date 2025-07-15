@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/chao/ROV_code/src/rov_start_pkg/src/camera_init_node.cpp" "/home/chao/ROV_code/build/rov_start_pkg/CMakeFiles/camera_init_node.dir/src/camera_init_node.cpp.o"
+  "/home/a/ROV_code/src/rov_start_pkg/src/camera_init_node.cpp" "/home/a/ROV_code/build/rov_start_pkg/CMakeFiles/camera_init_node.dir/src/camera_init_node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,8 +17,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/chao/ROV_code/devel/include"
-  "/home/chao/ROV_code/src/rov_start_pkg/include"
+  "/home/a/ROV_code/devel/include"
+  "/home/a/ROV_code/src/rov_start_pkg/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/opencv4"

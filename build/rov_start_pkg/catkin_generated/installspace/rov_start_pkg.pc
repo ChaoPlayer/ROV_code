@@ -1,4 +1,4 @@
-prefix=/home/chao/ROV_code/install
+prefix=/home/a/ROV_code/install
 
 Name: rov_start_pkg
 Description: Description of rov_start_pkg

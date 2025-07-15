@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chao/ROV_code/src
+CMAKE_SOURCE_DIR = /home/a/ROV_code/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chao/ROV_code/build
+CMAKE_BINARY_DIR = /home/a/ROV_code/build
 
 # Utility rule file for rov_start_pkg_genlisp.
 
@@ -63,10 +63,10 @@ rov_start_pkg/CMakeFiles/rov_start_pkg_genlisp.dir/build: rov_start_pkg_genlisp
 .PHONY : rov_start_pkg/CMakeFiles/rov_start_pkg_genlisp.dir/build
 
 rov_start_pkg/CMakeFiles/rov_start_pkg_genlisp.dir/clean:
-	cd /home/chao/ROV_code/build/rov_start_pkg && $(CMAKE_COMMAND) -P CMakeFiles/rov_start_pkg_genlisp.dir/cmake_clean.cmake
+	cd /home/a/ROV_code/build/rov_start_pkg && $(CMAKE_COMMAND) -P CMakeFiles/rov_start_pkg_genlisp.dir/cmake_clean.cmake
 .PHONY : rov_start_pkg/CMakeFiles/rov_start_pkg_genlisp.dir/clean
 
 rov_start_pkg/CMakeFiles/rov_start_pkg_genlisp.dir/depend:
-	cd /home/chao/ROV_code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chao/ROV_code/src /home/chao/ROV_code/src/rov_start_pkg /home/chao/ROV_code/build /home/chao/ROV_code/build/rov_start_pkg /home/chao/ROV_code/build/rov_start_pkg/CMakeFiles/rov_start_pkg_genlisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/a/ROV_code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/a/ROV_code/src /home/a/ROV_code/src/rov_start_pkg /home/a/ROV_code/build /home/a/ROV_code/build/rov_start_pkg /home/a/ROV_code/build/rov_start_pkg/CMakeFiles/rov_start_pkg_genlisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rov_start_pkg/CMakeFiles/rov_start_pkg_genlisp.dir/depend
 
