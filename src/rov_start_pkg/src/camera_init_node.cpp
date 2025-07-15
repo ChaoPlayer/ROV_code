@@ -9,7 +9,7 @@ bool cam_cap=false;//用于判断是否获得图像
 
 void feedback(const rov_start_pkg::init_msg::ConstPtr &msg){
     if(msg->command&&msg->module_name=="center"){
-        ROS_INFO("双目摄像头正在初始化...\n");
+        ROS_INFO("camera is initiliazing...\n");
         return;
     }
 }
@@ -17,20 +17,20 @@ bool camera_check(int cam_id,std::string name){
     cv::VideoCapture cap(cam_id);
     cv::Mat frame;
     if(!cap.isOpened()){
-        ROS_ERROR("%s 无法连接至双目相机\n",name);
+        ROS_ERROR("%s camera isn't online\n",name);
         status_map["camera"]=false;
     }
     else{
-        ROS_INFO("%s 摄像头已打开\n");
+        ROS_INFO("%s camera has been opened\n");
         status_map["camera"]=true;
         cap>>frame;
         cap.release();//因为有重试循环，所以每取一帧就释放一次
         if(!frame.empty()){
-            ROS_INFO("摄像头获取图像成功！");
+            ROS_INFO("camera has successfully get the image！");
             return true;
         }
         else{
-            ROS_WARN("摄像头无法获取图像");
+            ROS_WARN("Capturing images failed");
             return false;
         }
     }
@@ -50,12 +50,12 @@ int main(int argc,char** argv){
     {
     if(status_map["camera"]!=cam_init.success)
     {
-        ROS_WARN("摄像头已连接，但无法获取图像，正在重试...");
+        ROS_WARN("camera has linked,but couldn't capture images.RELOADING...");
         over_time++;
     }
     if(over_time>100)
     {
-        ROS_ERROR("摄像头初始化超时\n");
+        ROS_ERROR("camera runtime error\n");
         break;
     }
     loop_rate.sleep();

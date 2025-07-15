@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+rov_start_pkg/CMakeFiles/camera_init_node.dir/rule:
+	cd /home/chao/ROV_code/build && $(MAKE) -f CMakeFiles/Makefile2 rov_start_pkg/CMakeFiles/camera_init_node.dir/rule
+.PHONY : rov_start_pkg/CMakeFiles/camera_init_node.dir/rule
+
+# Convenience name for target.
+camera_init_node: rov_start_pkg/CMakeFiles/camera_init_node.dir/rule
+
+.PHONY : camera_init_node
+
+# fast build rule for target.
+camera_init_node/fast:
+	cd /home/chao/ROV_code/build && $(MAKE) -f rov_start_pkg/CMakeFiles/camera_init_node.dir/build.make rov_start_pkg/CMakeFiles/camera_init_node.dir/build
+.PHONY : camera_init_node/fast
+
+# Convenience name for target.
 rov_start_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
 	cd /home/chao/ROV_code/build && $(MAKE) -f CMakeFiles/Makefile2 rov_start_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : rov_start_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
@@ -602,6 +617,33 @@ rov_start_pkg_genpy/fast:
 	cd /home/chao/ROV_code/build && $(MAKE) -f rov_start_pkg/CMakeFiles/rov_start_pkg_genpy.dir/build.make rov_start_pkg/CMakeFiles/rov_start_pkg_genpy.dir/build
 .PHONY : rov_start_pkg_genpy/fast
 
+src/camera_init_node.o: src/camera_init_node.cpp.o
+
+.PHONY : src/camera_init_node.o
+
+# target to build an object file
+src/camera_init_node.cpp.o:
+	cd /home/chao/ROV_code/build && $(MAKE) -f rov_start_pkg/CMakeFiles/camera_init_node.dir/build.make rov_start_pkg/CMakeFiles/camera_init_node.dir/src/camera_init_node.cpp.o
+.PHONY : src/camera_init_node.cpp.o
+
+src/camera_init_node.i: src/camera_init_node.cpp.i
+
+.PHONY : src/camera_init_node.i
+
+# target to preprocess a source file
+src/camera_init_node.cpp.i:
+	cd /home/chao/ROV_code/build && $(MAKE) -f rov_start_pkg/CMakeFiles/camera_init_node.dir/build.make rov_start_pkg/CMakeFiles/camera_init_node.dir/src/camera_init_node.cpp.i
+.PHONY : src/camera_init_node.cpp.i
+
+src/camera_init_node.s: src/camera_init_node.cpp.s
+
+.PHONY : src/camera_init_node.s
+
+# target to generate assembly for a file
+src/camera_init_node.cpp.s:
+	cd /home/chao/ROV_code/build && $(MAKE) -f rov_start_pkg/CMakeFiles/camera_init_node.dir/build.make rov_start_pkg/CMakeFiles/camera_init_node.dir/src/camera_init_node.cpp.s
+.PHONY : src/camera_init_node.cpp.s
+
 src/rov_init_node.o: src/rov_init_node.cpp.o
 
 .PHONY : src/rov_init_node.o
@@ -665,6 +707,7 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... edit_cache"
+	@echo "... camera_init_node"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... install/local"
@@ -698,6 +741,9 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... rov_start_pkg_generate_messages_py"
 	@echo "... rov_start_pkg_genpy"
+	@echo "... src/camera_init_node.o"
+	@echo "... src/camera_init_node.i"
+	@echo "... src/camera_init_node.s"
 	@echo "... src/rov_init_node.o"
 	@echo "... src/rov_init_node.i"
 	@echo "... src/rov_init_node.s"

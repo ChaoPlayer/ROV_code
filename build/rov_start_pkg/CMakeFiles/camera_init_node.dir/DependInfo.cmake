@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/chao/ROV_code/src/rov_start_pkg/src/servo_init_node.cpp" "/home/chao/ROV_code/build/rov_start_pkg/CMakeFiles/servo_init_node.dir/src/servo_init_node.cpp.o"
+  "/home/chao/ROV_code/src/rov_start_pkg/src/camera_init_node.cpp" "/home/chao/ROV_code/build/rov_start_pkg/CMakeFiles/camera_init_node.dir/src/camera_init_node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

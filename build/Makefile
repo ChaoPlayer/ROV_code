@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named camera_init_node
+
+# Build rule for target.
+camera_init_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 camera_init_node
+.PHONY : camera_init_node
+
+# fast build rule for target.
+camera_init_node/fast:
+	$(MAKE) -f rov_start_pkg/CMakeFiles/camera_init_node.dir/build.make rov_start_pkg/CMakeFiles/camera_init_node.dir/build
+.PHONY : camera_init_node/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_lisp
 
 # Build rule for target.
@@ -683,6 +696,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... camera_init_node"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_eus"

@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/chao/ROV_code/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_95622/fast && /usr/bin/make -f CMakeFiles/cmTC_95622.dir/build.make CMakeFiles/cmTC_95622.dir/build
+Run Build Command(s):/usr/bin/make cmTC_5d330/fast && /usr/bin/make -f CMakeFiles/cmTC_5d330.dir/build.make CMakeFiles/cmTC_5d330.dir/build
 make[1]: 进入目录“/home/chao/ROV_code/build/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_95622.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_95622.dir/src.c.o   -c /home/chao/ROV_code/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_95622
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95622.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_95622.dir/src.c.o  -o cmTC_95622 
-/usr/bin/ld: CMakeFiles/cmTC_95622.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_5d330.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_5d330.dir/src.c.o   -c /home/chao/ROV_code/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5d330
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d330.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_5d330.dir/src.c.o  -o cmTC_5d330 
+/usr/bin/ld: CMakeFiles/cmTC_5d330.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_95622.dir/build.make:87：cmTC_95622] 错误 1
+make[1]: *** [CMakeFiles/cmTC_5d330.dir/build.make:87：cmTC_5d330] 错误 1
 make[1]: 离开目录“/home/chao/ROV_code/build/CMakeFiles/CMakeTmp”
-make: *** [Makefile:121：cmTC_95622/fast] 错误 2
+make: *** [Makefile:121：cmTC_5d330/fast] 错误 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/chao/ROV_code/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_54955/fast && /usr/bin/make -f CMakeFiles/cmTC_54955.dir/build.make CMakeFiles/cmTC_54955.dir/build
+Run Build Command(s):/usr/bin/make cmTC_7c882/fast && /usr/bin/make -f CMakeFiles/cmTC_7c882.dir/build.make CMakeFiles/cmTC_7c882.dir/build
 make[1]: 进入目录“/home/chao/ROV_code/build/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_54955.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_54955.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_54955
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54955.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_54955.dir/CheckFunctionExists.c.o  -o cmTC_54955  -lpthreads 
+Building C object CMakeFiles/cmTC_7c882.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_7c882.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7c882
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c882.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_7c882.dir/CheckFunctionExists.c.o  -o cmTC_7c882  -lpthreads 
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_54955.dir/build.make:87：cmTC_54955] 错误 1
+make[1]: *** [CMakeFiles/cmTC_7c882.dir/build.make:87：cmTC_7c882] 错误 1
 make[1]: 离开目录“/home/chao/ROV_code/build/CMakeFiles/CMakeTmp”
-make: *** [Makefile:121：cmTC_54955/fast] 错误 2
+make: *** [Makefile:121：cmTC_7c882/fast] 错误 2
 
 
 
