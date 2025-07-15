@@ -1,0 +1,8 @@
+prefix=/home/chao/ROV_code/install
+
+Name: control_pkg
+Description: Description of control_pkg
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs headfile_pkg

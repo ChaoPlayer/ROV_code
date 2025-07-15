@@ -10,6 +10,8 @@ project(control_pkg)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
+  serial
+  headfile_pkg
 )
 
 ## System dependencies are found with CMake's conventions
@@ -104,8 +106,9 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES control_pkg
-#  CATKIN_DEPENDS roscpp std_msgs
+  CATKIN_DEPENDS roscpp std_msgs headfile_pkg
 #  DEPENDS system_lib
+  INCLUDE_DIRS include
 )
 
 ###########
@@ -115,10 +118,12 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
 )
 
+add_executable(control_pkg src/servo_control_node.cpp)
+target_link_libraries(control_pkg ${catkin_LIBRARIES} serial)
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/control_pkg.cpp

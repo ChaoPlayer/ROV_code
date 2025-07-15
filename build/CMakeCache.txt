@@ -400,6 +400,12 @@ _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
 
+//Value Computed by CMake
+control_pkg_BINARY_DIR:STATIC=/home/chao/ROV_code/build/control_pkg
+
+//Value Computed by CMake
+control_pkg_SOURCE_DIR:STATIC=/home/chao/ROV_code/src/control_pkg
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
@@ -467,6 +473,15 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
+//Value Computed by CMake
+headfile_pkg_BINARY_DIR:STATIC=/home/chao/ROV_code/build/headfile_pkg
+
+//The directory containing a CMake configuration file for headfile_pkg.
+headfile_pkg_DIR:PATH=/home/chao/ROV_code/devel/share/headfile_pkg/cmake
+
+//Value Computed by CMake
+headfile_pkg_SOURCE_DIR:STATIC=/home/chao/ROV_code/src/headfile_pkg
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/noetic/lib/libserial.so
 
@@ -499,6 +514,8 @@ rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
 
 //Value Computed by CMake
 rov_start_pkg_BINARY_DIR:STATIC=/home/chao/ROV_code/build/rov_start_pkg
+
+rov_start_pkg_DIR:PATH=
 
 //Value Computed by CMake
 rov_start_pkg_SOURCE_DIR:STATIC=/home/chao/ROV_code/src/rov_start_pkg
@@ -660,7 +677,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
