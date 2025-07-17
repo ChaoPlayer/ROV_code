@@ -17,6 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/chao/ROV_code/devel/include"
   "/home/chao/ROV_code/src/control_pkg/include"
   "/home/chao/ROV_code/src/headfile_pkg/include"
   "/opt/ros/noetic/include"

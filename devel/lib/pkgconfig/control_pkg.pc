@@ -3,6 +3,6 @@ prefix=/home/chao/ROV_code/devel
 Name: control_pkg
 Description: Description of control_pkg
 Version: 0.0.0
-Cflags: -I/home/chao/ROV_code/src/control_pkg/include
+Cflags: -I/home/chao/ROV_code/devel/include -I/home/chao/ROV_code/src/control_pkg/include
 Libs: -L${prefix}/lib 
-Requires: roscpp std_msgs headfile_pkg
+Requires: roscpp std_msgs headfile_pkg message_runtime

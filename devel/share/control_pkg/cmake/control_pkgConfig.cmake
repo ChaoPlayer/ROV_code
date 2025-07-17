@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(control_pkg_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/chao/ROV_code/src/control_pkg/include " STREQUAL " ")
+if(NOT "/home/chao/ROV_code/devel/include;/home/chao/ROV_code/src/control_pkg/include " STREQUAL " ")
   set(control_pkg_INCLUDE_DIRS "")
-  set(_include_dirs "/home/chao/ROV_code/src/control_pkg/include")
+  set(_include_dirs "/home/chao/ROV_code/devel/include;/home/chao/ROV_code/src/control_pkg/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -156,7 +156,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/chao/ROV_code/devel/lib;/home/chao/catkin_rov/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/chao/ROV_code/devel/lib;/home/chao/ROV_code/devel/lib;/home/chao/catkin_rov/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -179,7 +179,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(control_pkg_EXPORTED_TARGETS "")
+set(control_pkg_EXPORTED_TARGETS "control_pkg_generate_messages_cpp;control_pkg_generate_messages_eus;control_pkg_generate_messages_lisp;control_pkg_generate_messages_nodejs;control_pkg_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${control_pkg_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -187,7 +187,7 @@ foreach(t ${control_pkg_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "roscpp;std_msgs;headfile_pkg")
+set(depends "roscpp;std_msgs;headfile_pkg;message_runtime")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -216,7 +216,7 @@ foreach(depend ${depends})
   _list_append_deduplicate(control_pkg_EXPORTED_TARGETS ${${control_pkg_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "control_pkg-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${control_pkg_DIR}/${extra})
