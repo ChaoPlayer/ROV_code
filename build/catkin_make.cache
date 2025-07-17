@@ -1,2 +1,2 @@
 control_pkg:headfile_pkg:rov_start_pkg
--DCATKIN_DEVEL_PREFIX=/home/a/ROV_code/devel -DCMAKE_INSTALL_PREFIX=/home/a/ROV_code/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/chao/ROV_code/devel -DCMAKE_INSTALL_PREFIX=/home/chao/ROV_code/install -G Unix Makefiles

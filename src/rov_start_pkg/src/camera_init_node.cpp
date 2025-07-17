@@ -3,7 +3,7 @@
 #include<opencv2/opencv.hpp>
 #include"rov_init_node.h"
 
-#define CAMERA_ID 1
+#define CAMERA_ID 0//双目摄像头，但是单USB信号，传入的图像是1280*480的
 #define CAMERA_NAME "camera"
 bool cam_cap=false;//用于判断是否获得图像
 
@@ -26,7 +26,7 @@ bool camera_check(int cam_id,std::string name){
         cap>>frame;
         cap.release();//因为有重试循环，所以每取一帧就释放一次
         if(!frame.empty()){
-            ROS_INFO("camera has successfully get the image！");
+            ROS_INFO("camera has successfully get the image!");
             return true;
         }
         else{
@@ -59,6 +59,7 @@ int main(int argc,char** argv){
         break;
     }
     loop_rate.sleep();
+    ros::spinOnce();
     }
     
     cam_pub.publish(cam_init);

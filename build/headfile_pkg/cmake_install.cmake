@@ -1,8 +1,8 @@
-# Install script for directory: /home/a/ROV_code/src/headfile_pkg
+# Install script for directory: /home/chao/ROV_code/src/headfile_pkg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/a/ROV_code/install")
+  set(CMAKE_INSTALL_PREFIX "/home/chao/ROV_code/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/a/ROV_code/build/headfile_pkg/catkin_generated/installspace/headfile_pkg.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/chao/ROV_code/build/headfile_pkg/catkin_generated/installspace/headfile_pkg.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/headfile_pkg/cmake" TYPE FILE FILES
-    "/home/a/ROV_code/build/headfile_pkg/catkin_generated/installspace/headfile_pkgConfig.cmake"
-    "/home/a/ROV_code/build/headfile_pkg/catkin_generated/installspace/headfile_pkgConfig-version.cmake"
+    "/home/chao/ROV_code/build/headfile_pkg/catkin_generated/installspace/headfile_pkgConfig.cmake"
+    "/home/chao/ROV_code/build/headfile_pkg/catkin_generated/installspace/headfile_pkgConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/headfile_pkg" TYPE FILE FILES "/home/a/ROV_code/src/headfile_pkg/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/headfile_pkg" TYPE FILE FILES "/home/chao/ROV_code/src/headfile_pkg/package.xml")
 endif()
 

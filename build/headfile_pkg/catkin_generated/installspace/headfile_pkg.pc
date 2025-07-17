@@ -1,4 +1,4 @@
-prefix=/home/a/ROV_code/install
+prefix=/home/chao/ROV_code/install
 
 Name: headfile_pkg
 Description: Description of headfile_pkg

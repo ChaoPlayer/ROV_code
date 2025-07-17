@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/a/ROV_code/src
+CMAKE_SOURCE_DIR = /home/chao/ROV_code/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/a/ROV_code/build
+CMAKE_BINARY_DIR = /home/chao/ROV_code/build
 
 # Utility rule file for run_tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/run_tests.dir/clean:
 .PHONY : CMakeFiles/run_tests.dir/clean
 
 CMakeFiles/run_tests.dir/depend:
-	cd /home/a/ROV_code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/a/ROV_code/src /home/a/ROV_code/src /home/a/ROV_code/build /home/a/ROV_code/build /home/a/ROV_code/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chao/ROV_code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chao/ROV_code/src /home/chao/ROV_code/src /home/chao/ROV_code/build /home/chao/ROV_code/build /home/chao/ROV_code/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/run_tests.dir/depend
 

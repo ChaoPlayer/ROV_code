@@ -79,13 +79,25 @@ void get_angle(int servo_id,LibSerial::SerialPort ser){
  * @return false 
  */
 bool mode_change(LibSerial::SerialPort ser){
-    uint8_t servo_now_id=0x01;//每一步要控制的舵机，这是个临时变量，https://fanyi.youdao.com/#/TextTranslate初始从1号舵机开始
+    uint8_t servo_now_id=0x01;//每一步要控制的舵机，这是个临时变量，初始从1号舵机开始
     uint8_t check_sum=0;
+    std::vector<uint8_t> angle_tmep=angle_transform_inverse(WING_TRANS_ANGLE);//用于存储角度转换的小端序数，第一次调用翼板的角度信息
     std::vector<uint8_t> req_buff={0x12,0x4C,0x0D,0x0B,servo_now_id};
 
     //翼板展开
 
-    req_buff.insert(angle_transform_inverse(WING_TRANS_ANGLE));
+    req_buff.insert(req_buff.end(),angle_tmep.begin(),angle_tmep.end());
+    ser.Write(req_buff);
+
+    //推进器变换
+    req_buff.erase(req_buff.begin()+6,req_buff.end());//删除旧的角度信息
+    angle_tmep=angle_transform_inverse(MOTOR_TRANS_ANGLE);
+    req_buff.insert(req_buff.end(),angle_tmep.begin(),angle_tmep.end());
+    for(int i=1;i<=3;i++){
+        servo_now_id=0x02+i;
+        req_buff[4]=servo_now_id;//修改接受消息的舵机编号
+        ser.Write(req_buff);
+    }
 }
 int main(int argc,char** argv){
     ros::init(argc,argv,"servo_control_node");
@@ -103,7 +115,4 @@ int main(int argc,char** argv){
         return 1;
     }
     ROS_INFO("Servo_control_node is running...");
-    
-
-
 }

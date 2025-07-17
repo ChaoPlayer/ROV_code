@@ -1,8 +1,8 @@
-prefix=/home/a/ROV_code/devel
+prefix=/home/chao/ROV_code/devel
 
 Name: headfile_pkg
 Description: Description of headfile_pkg
 Version: 0.0.0
-Cflags: -I/home/a/ROV_code/src/headfile_pkg/include
+Cflags: -I/home/chao/ROV_code/src/headfile_pkg/include
 Libs: -L${prefix}/lib 
 Requires: roscpp std_msgs

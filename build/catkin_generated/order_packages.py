@@ -1,5 +1,5 @@
 # generated from catkin/cmake/template/order_packages.context.py.in
-source_root_dir = '/home/a/ROV_code/src'
+source_root_dir = '/home/chao/ROV_code/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/home/a/ROV_code/devel;/home/a/mavros_try_ws/devel;/home/a/桌面/auv_ws/devel;/opt/ros/noetic'.split(';') if '/home/a/ROV_code/devel;/home/a/mavros_try_ws/devel;/home/a/桌面/auv_ws/devel;/opt/ros/noetic' != '' else []
+underlay_workspaces = '/home/chao/catkin_rov/devel;/opt/ros/noetic'.split(';') if '/home/chao/catkin_rov/devel;/opt/ros/noetic' != '' else []
