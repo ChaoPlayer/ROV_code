@@ -9,6 +9,27 @@
 LibSerial::SerialPort ser;//全局公用的串口对象
 //本节点主要实现舵机角度的监控和机翼姿态的转换
 
+
+int kbhit(){
+    struct termios oldt,newt;
+    int ch;
+    int oldf;
+
+    tcgetattr(STDIN_FILENO,&oldt);
+    newt=oldt;
+    newt.c_lflag&=~(ICANON | ECHO);//非缓冲，无回显
+    tcsetattr(STDIN_FILENO,F_GETFL,0);
+    fcntl(STDIN_FILENO,F_SETFL, oldf | O_NONBLOCK);
+    ch=getchar();
+    tcsetattr(STDIN_FILENO,TCSANOW,&oldt);
+
+    if(ch!=EOF){
+        ungetc(ch,stdin);
+        return 1;
+    }
+    return 0;
+}
+
 /**
  * @brief 手动幂函数，返回值为整数
  * 
@@ -117,6 +138,23 @@ void mode_change(LibSerial::SerialPort &ser){
     }
 }
 /**
+ * @brief 用于对舵机进行手动控制，通过键盘响应，同时带有角度监测
+ * 
+ */
+void manual_control(uint8_t servo_id){
+    float current_angle=get_angle(servo_id,ser);
+    ROS_INFO("Current mode:Manual control mode\nCurrent servo: %d \nCurrent angle %.1f °",servo_id,current_angle);
+    while(ros::ok()){
+        if(kbhit()){
+            char c=getchar();
+            if(c=='q') break;
+            else if(c=='a') current_angle+=10;
+            else if(c=='d') current_angle-=10;
+            else continue;
+        }
+    }
+}
+/**
  * @brief 用于分流舵机控制请求。命令：angle:获取某一个舵机的角度，消息中的servoID要写明；mode_change:变结构命令
  * 
  * @param req 
@@ -130,8 +168,11 @@ bool command_handler(control_pkg::servo_control::Request &req,
     if(req.req=="angle"){
         res.angle=get_angle(req.servoID,ser);
     }
-    if(req.req=="change_mode"){
+    else if(req.req=="change_mode"){
         mode_change(ser);
+    }
+    else if(req.req=="manual_control"){
+
     }
 }
 int main(int argc,char** argv){
