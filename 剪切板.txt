@@ -1,0 +1,65 @@
+✅ 二、如何使用向日葵远程连接 Ubuntu 和 Windows
+🎯 场景 1：Windows 控制 Ubuntu
+1. 在 Ubuntu 上安装向日葵客户端（被控端）
+打开终端，执行：
+
+bash
+复制
+编辑
+wget https://sunlogin.oray.com/download/linux/sunlogin-client_11.0.0.52613_amd64.deb
+sudo dpkg -i sunlogin-client_*.deb
+如遇依赖问题可执行：
+
+bash
+复制
+编辑
+sudo apt --fix-broken install
+sudo dpkg -i sunlogin-client_*.deb
+2. 启动并绑定账号
+bash
+复制
+编辑
+sudo sunlogin-cli start
+sudo sunlogin-cli bind --token 你的登录令牌
+登录向日葵官网，在控制台获取 绑定令牌（Token）：控制台地址
+
+3. 在 Windows 上安装向日葵远程控制端
+下载控制端：https://sunlogin.oray.com/download
+
+绑定同一个帐号后即可看到 Ubuntu 设备，点击即可远程控制。
+
+🎯 场景 2：Ubuntu 控制 Windows（远程桌面）
+这种情况你可以：
+
+在 Windows 上安装 向日葵被控端
+
+在 Ubuntu 上安装 浏览器版本控制端（或使用 wine 模拟 Windows 控制端）
+
+但由于官方对 Linux 控制端支持较少，如果你要从 Ubuntu 控制 Windows，推荐使用：
+
+方式	工具	说明
+使用浏览器控制	控制台	免安装
+使用 RDP + 向日葵穿透	Windows 向日葵穿透 + Ubuntu Remmina	组合方式
+
+✅ 三、免费版限制
+免费账号限制：同时在线设备 ≤3 台
+
+控制功能完整，无远程桌面时间限制
+
+不能批量部署（需要专业版）
+
+✅ 四、向日葵和其它方案比较
+特性	向日葵	WireGuard+VPS	frp+VPS	Tailscale
+易用性	⭐⭐⭐⭐⭐（最高）	⭐⭐	⭐⭐	⭐⭐⭐⭐
+内网穿透	✅（自动）	❌（需中转/VPS）	✅（反向代理）	✅
+安全性	⭐⭐⭐⭐	⭐⭐⭐⭐⭐（全端自建）	⭐⭐⭐⭐	⭐⭐⭐⭐
+文件/桌面访问	✅（GUI+传文件）	需搭配 RDP/SFTP	需搭配 RDP/SFTP	需搭配 RDP/SFTP
+适合新手	✅	❌	❌	✅
+
+✅ 总结：是否推荐使用向日葵？
+你是……	是否推荐向日葵
+想快速远程控制 Ubuntu 或 Windows	✅ 强烈推荐
+不想折腾公网/端口映射/VPS	✅ 推荐
+想实现自动化、私有化部署	❌ 不推荐（选 frp / WireGuard）
+
+如果你告诉我你的设备角色（控制端/被控端），我可以提供 具体命令和绑定示例。需要我一步步帮你配置向日葵吗？
