@@ -100,6 +100,18 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -122,18 +134,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+control_pkg/CMakeFiles/control_core_node.dir/rule:
+	cd /home/chao/ROV_code/build && $(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/control_core_node.dir/rule
+.PHONY : control_pkg/CMakeFiles/control_core_node.dir/rule
+
+# Convenience name for target.
+control_core_node: control_pkg/CMakeFiles/control_core_node.dir/rule
+
+.PHONY : control_core_node
+
+# fast build rule for target.
+control_core_node/fast:
+	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/control_core_node.dir/build.make control_pkg/CMakeFiles/control_core_node.dir/build
+.PHONY : control_core_node/fast
+
+# Convenience name for target.
 control_pkg/CMakeFiles/control_pkg_generate_messages.dir/rule:
 	cd /home/chao/ROV_code/build && $(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/control_pkg_generate_messages.dir/rule
 .PHONY : control_pkg/CMakeFiles/control_pkg_generate_messages.dir/rule
@@ -196,6 +211,21 @@ _control_pkg_generate_messages_check_deps_servo_control: control_pkg/CMakeFiles/
 _control_pkg_generate_messages_check_deps_servo_control/fast:
 	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/_control_pkg_generate_messages_check_deps_servo_control.dir/build.make control_pkg/CMakeFiles/_control_pkg_generate_messages_check_deps_servo_control.dir/build
 .PHONY : _control_pkg_generate_messages_check_deps_servo_control/fast
+
+# Convenience name for target.
+control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/rule:
+	cd /home/chao/ROV_code/build && $(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/rule
+.PHONY : control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+control_pkg_generate_messages_cpp: control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/rule
+
+.PHONY : control_pkg_generate_messages_cpp
+
+# fast build rule for target.
+control_pkg_generate_messages_cpp/fast:
+	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build
+.PHONY : control_pkg_generate_messages_cpp/fast
 
 # Convenience name for target.
 control_pkg/CMakeFiles/control_pkg_gencpp.dir/rule:
@@ -303,21 +333,6 @@ control_pkg_gennodejs/fast:
 .PHONY : control_pkg_gennodejs/fast
 
 # Convenience name for target.
-control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/rule:
-	cd /home/chao/ROV_code/build && $(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/rule
-.PHONY : control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/rule
-
-# Convenience name for target.
-control_pkg_generate_messages_py: control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/rule
-
-.PHONY : control_pkg_generate_messages_py
-
-# fast build rule for target.
-control_pkg_generate_messages_py/fast:
-	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/build
-.PHONY : control_pkg_generate_messages_py/fast
-
-# Convenience name for target.
 control_pkg/CMakeFiles/control_pkg_genpy.dir/rule:
 	cd /home/chao/ROV_code/build && $(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/control_pkg_genpy.dir/rule
 .PHONY : control_pkg/CMakeFiles/control_pkg_genpy.dir/rule
@@ -333,34 +348,61 @@ control_pkg_genpy/fast:
 .PHONY : control_pkg_genpy/fast
 
 # Convenience name for target.
-control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/rule:
-	cd /home/chao/ROV_code/build && $(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/rule
-.PHONY : control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/rule
+control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/rule:
+	cd /home/chao/ROV_code/build && $(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/rule
+.PHONY : control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/rule
 
 # Convenience name for target.
-control_pkg_generate_messages_cpp: control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/rule
+control_pkg_generate_messages_py: control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/rule
 
-.PHONY : control_pkg_generate_messages_cpp
+.PHONY : control_pkg_generate_messages_py
 
 # fast build rule for target.
-control_pkg_generate_messages_cpp/fast:
-	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build
-.PHONY : control_pkg_generate_messages_cpp/fast
+control_pkg_generate_messages_py/fast:
+	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/build
+.PHONY : control_pkg_generate_messages_py/fast
 
 # Convenience name for target.
-control_pkg/CMakeFiles/control_pkg.dir/rule:
-	cd /home/chao/ROV_code/build && $(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/control_pkg.dir/rule
-.PHONY : control_pkg/CMakeFiles/control_pkg.dir/rule
+control_pkg/CMakeFiles/servo_control_node.dir/rule:
+	cd /home/chao/ROV_code/build && $(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/servo_control_node.dir/rule
+.PHONY : control_pkg/CMakeFiles/servo_control_node.dir/rule
 
 # Convenience name for target.
-control_pkg: control_pkg/CMakeFiles/control_pkg.dir/rule
+servo_control_node: control_pkg/CMakeFiles/servo_control_node.dir/rule
 
-.PHONY : control_pkg
+.PHONY : servo_control_node
 
 # fast build rule for target.
-control_pkg/fast:
-	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/control_pkg.dir/build.make control_pkg/CMakeFiles/control_pkg.dir/build
-.PHONY : control_pkg/fast
+servo_control_node/fast:
+	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/servo_control_node.dir/build.make control_pkg/CMakeFiles/servo_control_node.dir/build
+.PHONY : servo_control_node/fast
+
+src/control_core_node.o: src/control_core_node.cpp.o
+
+.PHONY : src/control_core_node.o
+
+# target to build an object file
+src/control_core_node.cpp.o:
+	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/control_core_node.dir/build.make control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o
+.PHONY : src/control_core_node.cpp.o
+
+src/control_core_node.i: src/control_core_node.cpp.i
+
+.PHONY : src/control_core_node.i
+
+# target to preprocess a source file
+src/control_core_node.cpp.i:
+	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/control_core_node.dir/build.make control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.i
+.PHONY : src/control_core_node.cpp.i
+
+src/control_core_node.s: src/control_core_node.cpp.s
+
+.PHONY : src/control_core_node.s
+
+# target to generate assembly for a file
+src/control_core_node.cpp.s:
+	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/control_core_node.dir/build.make control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.s
+.PHONY : src/control_core_node.cpp.s
 
 src/servo_control_node.o: src/servo_control_node.cpp.o
 
@@ -368,7 +410,7 @@ src/servo_control_node.o: src/servo_control_node.cpp.o
 
 # target to build an object file
 src/servo_control_node.cpp.o:
-	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/control_pkg.dir/build.make control_pkg/CMakeFiles/control_pkg.dir/src/servo_control_node.cpp.o
+	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/servo_control_node.dir/build.make control_pkg/CMakeFiles/servo_control_node.dir/src/servo_control_node.cpp.o
 .PHONY : src/servo_control_node.cpp.o
 
 src/servo_control_node.i: src/servo_control_node.cpp.i
@@ -377,7 +419,7 @@ src/servo_control_node.i: src/servo_control_node.cpp.i
 
 # target to preprocess a source file
 src/servo_control_node.cpp.i:
-	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/control_pkg.dir/build.make control_pkg/CMakeFiles/control_pkg.dir/src/servo_control_node.cpp.i
+	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/servo_control_node.dir/build.make control_pkg/CMakeFiles/servo_control_node.dir/src/servo_control_node.cpp.i
 .PHONY : src/servo_control_node.cpp.i
 
 src/servo_control_node.s: src/servo_control_node.cpp.s
@@ -386,7 +428,7 @@ src/servo_control_node.s: src/servo_control_node.cpp.s
 
 # target to generate assembly for a file
 src/servo_control_node.cpp.s:
-	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/control_pkg.dir/build.make control_pkg/CMakeFiles/control_pkg.dir/src/servo_control_node.cpp.s
+	cd /home/chao/ROV_code/build && $(MAKE) -f control_pkg/CMakeFiles/servo_control_node.dir/build.make control_pkg/CMakeFiles/servo_control_node.dir/src/servo_control_node.cpp.s
 .PHONY : src/servo_control_node.cpp.s
 
 # Help Target
@@ -399,8 +441,11 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... control_core_node"
 	@echo "... control_pkg_generate_messages"
 	@echo "... _control_pkg_generate_messages_check_deps_servo_control"
+	@echo "... install"
+	@echo "... control_pkg_generate_messages_cpp"
 	@echo "... control_pkg_gencpp"
 	@echo "... install/strip"
 	@echo "... control_pkg_generate_messages_nodejs"
@@ -410,11 +455,12 @@ help:
 	@echo "... control_pkg_geneus"
 	@echo "... test"
 	@echo "... control_pkg_gennodejs"
-	@echo "... control_pkg_generate_messages_py"
 	@echo "... control_pkg_genpy"
-	@echo "... install"
-	@echo "... control_pkg_generate_messages_cpp"
-	@echo "... control_pkg"
+	@echo "... control_pkg_generate_messages_py"
+	@echo "... servo_control_node"
+	@echo "... src/control_core_node.o"
+	@echo "... src/control_core_node.i"
+	@echo "... src/control_core_node.s"
 	@echo "... src/servo_control_node.o"
 	@echo "... src/servo_control_node.i"
 	@echo "... src/servo_control_node.s"

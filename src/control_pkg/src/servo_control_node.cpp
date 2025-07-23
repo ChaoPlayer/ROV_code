@@ -1,7 +1,10 @@
 #include"servo_control_node.h"
-#include"headfile_pkg/headfile.h"
+#include<headfile_pkg/headfile.h>
 #include<vector>
 #include<control_pkg/servo_control.h>
+#include <fcntl.h>     // for fcntl, F_GETFL, F_SETFL, O_NONBLOCK
+#include <unistd.h>    // for STDIN_FILENO
+
 
 #define SERVO_ID 0x01
 #define WING_TRANS_ANGLE 5000 //机翼变结构时两侧舵机要转过的角度
@@ -49,6 +52,12 @@ int pow_int(int a,int b){
     }
     return a;
 }
+/**
+ * @brief 用于将实际请求的角度转换为小端序数供通信使用
+ * 
+ * @param angle 
+ * @return std::vector<uint8_t> 
+ */
 std::vector<uint8_t> angle_transform_inverse(int angle){
     std::vector<uint8_t> bytes;
     int32_t angle_scaled=angle*10;
@@ -143,6 +152,7 @@ void mode_change(LibSerial::SerialPort &ser){
  */
 void manual_control(uint8_t servo_id){
     float current_angle=get_angle(servo_id,ser);
+    std::vector<uint8_t> buff={0x12,0x4C,0x0D,0x0B,servo_id};
     ROS_INFO("Current mode:Manual control mode\nCurrent servo: %d \nCurrent angle %.1f °",servo_id,current_angle);
     while(ros::ok()){
         if(kbhit()){
@@ -152,6 +162,17 @@ void manual_control(uint8_t servo_id){
             else if(c=='d') current_angle-=10;
             else continue;
         }
+        std::vector<uint8_t> angle_msg=angle_transform_inverse(current_angle);
+        buff.insert(buff.end(),angle_msg.begin(),angle_msg.end());
+
+        //校验和要加上
+        uint8_t check_sum=0;
+        for(auto i:buff){
+            check_sum+=i;
+        }
+        check_sum%=256;
+        buff.push_back(check_sum);
+        ser.Write(buff);
     }
 }
 /**
@@ -172,7 +193,8 @@ bool command_handler(control_pkg::servo_control::Request &req,
         mode_change(ser);
     }
     else if(req.req=="manual_control"){
-
+        std::thread(manual_control,req.servoID).detach();//将手动控制的函数放到后台，不影响主线程
+        return true;
     }
 }
 int main(int argc,char** argv){

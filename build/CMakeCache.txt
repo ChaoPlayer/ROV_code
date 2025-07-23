@@ -483,7 +483,7 @@ headfile_pkg_DIR:PATH=/home/chao/ROV_code/devel/share/headfile_pkg/cmake
 headfile_pkg_SOURCE_DIR:STATIC=/home/chao/ROV_code/src/headfile_pkg
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/libserial.so
+lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
 
 //The directory containing a CMake configuration file for message_generation.
 message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
@@ -523,6 +523,12 @@ serial_DIR:PATH=/opt/ros/noetic/share/serial/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/noetic/share/std_msgs/cmake
+
+//Value Computed by CMake
+vision_pkg_BINARY_DIR:STATIC=/home/chao/ROV_code/build/vision_pkg
+
+//Value Computed by CMake
+vision_pkg_SOURCE_DIR:STATIC=/home/chao/ROV_code/src/vision_pkg
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
@@ -675,7 +681,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -480,6 +480,19 @@ rosgraph_msgs_generate_messages_py/fast:
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named control_core_node
+
+# Build rule for target.
+control_core_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control_core_node
+.PHONY : control_core_node
+
+# fast build rule for target.
+control_core_node/fast:
+	$(MAKE) -f control_pkg/CMakeFiles/control_core_node.dir/build.make control_pkg/CMakeFiles/control_core_node.dir/build
+.PHONY : control_core_node/fast
+
+#=============================================================================
 # Target rules for targets named control_pkg_generate_messages
 
 # Build rule for target.
@@ -504,6 +517,19 @@ _control_pkg_generate_messages_check_deps_servo_control: cmake_check_build_syste
 _control_pkg_generate_messages_check_deps_servo_control/fast:
 	$(MAKE) -f control_pkg/CMakeFiles/_control_pkg_generate_messages_check_deps_servo_control.dir/build.make control_pkg/CMakeFiles/_control_pkg_generate_messages_check_deps_servo_control.dir/build
 .PHONY : _control_pkg_generate_messages_check_deps_servo_control/fast
+
+#=============================================================================
+# Target rules for targets named control_pkg_generate_messages_cpp
+
+# Build rule for target.
+control_pkg_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control_pkg_generate_messages_cpp
+.PHONY : control_pkg_generate_messages_cpp
+
+# fast build rule for target.
+control_pkg_generate_messages_cpp/fast:
+	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build
+.PHONY : control_pkg_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named control_pkg_gencpp
@@ -597,19 +623,6 @@ control_pkg_gennodejs/fast:
 .PHONY : control_pkg_gennodejs/fast
 
 #=============================================================================
-# Target rules for targets named control_pkg_generate_messages_py
-
-# Build rule for target.
-control_pkg_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 control_pkg_generate_messages_py
-.PHONY : control_pkg_generate_messages_py
-
-# fast build rule for target.
-control_pkg_generate_messages_py/fast:
-	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/build
-.PHONY : control_pkg_generate_messages_py/fast
-
-#=============================================================================
 # Target rules for targets named control_pkg_genpy
 
 # Build rule for target.
@@ -623,30 +636,30 @@ control_pkg_genpy/fast:
 .PHONY : control_pkg_genpy/fast
 
 #=============================================================================
-# Target rules for targets named control_pkg_generate_messages_cpp
+# Target rules for targets named control_pkg_generate_messages_py
 
 # Build rule for target.
-control_pkg_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 control_pkg_generate_messages_cpp
-.PHONY : control_pkg_generate_messages_cpp
+control_pkg_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control_pkg_generate_messages_py
+.PHONY : control_pkg_generate_messages_py
 
 # fast build rule for target.
-control_pkg_generate_messages_cpp/fast:
-	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build
-.PHONY : control_pkg_generate_messages_cpp/fast
+control_pkg_generate_messages_py/fast:
+	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/build
+.PHONY : control_pkg_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named control_pkg
+# Target rules for targets named servo_control_node
 
 # Build rule for target.
-control_pkg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 control_pkg
-.PHONY : control_pkg
+servo_control_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 servo_control_node
+.PHONY : servo_control_node
 
 # fast build rule for target.
-control_pkg/fast:
-	$(MAKE) -f control_pkg/CMakeFiles/control_pkg.dir/build.make control_pkg/CMakeFiles/control_pkg.dir/build
-.PHONY : control_pkg/fast
+servo_control_node/fast:
+	$(MAKE) -f control_pkg/CMakeFiles/servo_control_node.dir/build.make control_pkg/CMakeFiles/servo_control_node.dir/build
+.PHONY : servo_control_node/fast
 
 #=============================================================================
 # Target rules for targets named camera_init_node
@@ -880,8 +893,10 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... control_core_node"
 	@echo "... control_pkg_generate_messages"
 	@echo "... _control_pkg_generate_messages_check_deps_servo_control"
+	@echo "... control_pkg_generate_messages_cpp"
 	@echo "... control_pkg_gencpp"
 	@echo "... control_pkg_generate_messages_nodejs"
 	@echo "... control_pkg_generate_messages_eus"
@@ -889,10 +904,9 @@ help:
 	@echo "... control_pkg_genlisp"
 	@echo "... control_pkg_geneus"
 	@echo "... control_pkg_gennodejs"
-	@echo "... control_pkg_generate_messages_py"
 	@echo "... control_pkg_genpy"
-	@echo "... control_pkg_generate_messages_cpp"
-	@echo "... control_pkg"
+	@echo "... control_pkg_generate_messages_py"
+	@echo "... servo_control_node"
 	@echo "... camera_init_node"
 	@echo "... servo_init_node"
 	@echo "... rov_start_pkg_generate_messages"

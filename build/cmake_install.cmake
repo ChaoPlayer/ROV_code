@@ -149,6 +149,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/chao/ROV_code/build/headfile_pkg/cmake_install.cmake")
   include("/home/chao/ROV_code/build/control_pkg/cmake_install.cmake")
   include("/home/chao/ROV_code/build/rov_start_pkg/cmake_install.cmake")
+  include("/home/chao/ROV_code/build/vision_pkg/cmake_install.cmake")
 
 endif()
 

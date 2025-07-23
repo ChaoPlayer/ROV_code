@@ -123,8 +123,11 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(control_pkg src/servo_control_node.cpp)
-target_link_libraries(control_pkg ${catkin_LIBRARIES} serial)
+add_executable(servo_control_node src/servo_control_node.cpp)
+target_link_libraries(servo_control_node ${catkin_LIBRARIES} serial)
+
+add_executable(control_core_node src/control_core_node.cpp)
+target_link_libraries(control_core_node ${catkin_LIBRARIES} serial)
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/control_pkg.cpp

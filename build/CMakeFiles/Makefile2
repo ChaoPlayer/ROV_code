@@ -57,6 +57,7 @@ all: gtest/all
 all: headfile_pkg/all
 all: control_pkg/all
 all: rov_start_pkg/all
+all: vision_pkg/all
 
 .PHONY : all
 
@@ -65,6 +66,7 @@ preinstall: gtest/preinstall
 preinstall: headfile_pkg/preinstall
 preinstall: control_pkg/preinstall
 preinstall: rov_start_pkg/preinstall
+preinstall: vision_pkg/preinstall
 
 .PHONY : preinstall
 
@@ -78,6 +80,7 @@ clean: gtest/clean
 clean: headfile_pkg/clean
 clean: control_pkg/clean
 clean: rov_start_pkg/clean
+clean: vision_pkg/clean
 
 .PHONY : clean
 
@@ -85,8 +88,9 @@ clean: rov_start_pkg/clean
 # Directory level rules for directory control_pkg
 
 # Recursive "all" directory target.
+control_pkg/all: control_pkg/CMakeFiles/control_core_node.dir/all
 control_pkg/all: control_pkg/CMakeFiles/control_pkg_generate_messages.dir/all
-control_pkg/all: control_pkg/CMakeFiles/control_pkg.dir/all
+control_pkg/all: control_pkg/CMakeFiles/servo_control_node.dir/all
 
 .PHONY : control_pkg/all
 
@@ -96,8 +100,10 @@ control_pkg/preinstall:
 .PHONY : control_pkg/preinstall
 
 # Recursive "clean" directory target.
+control_pkg/clean: control_pkg/CMakeFiles/control_core_node.dir/clean
 control_pkg/clean: control_pkg/CMakeFiles/control_pkg_generate_messages.dir/clean
 control_pkg/clean: control_pkg/CMakeFiles/_control_pkg_generate_messages_check_deps_servo_control.dir/clean
+control_pkg/clean: control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/clean
 control_pkg/clean: control_pkg/CMakeFiles/control_pkg_gencpp.dir/clean
 control_pkg/clean: control_pkg/CMakeFiles/control_pkg_generate_messages_nodejs.dir/clean
 control_pkg/clean: control_pkg/CMakeFiles/control_pkg_generate_messages_eus.dir/clean
@@ -105,10 +111,9 @@ control_pkg/clean: control_pkg/CMakeFiles/control_pkg_generate_messages_lisp.dir
 control_pkg/clean: control_pkg/CMakeFiles/control_pkg_genlisp.dir/clean
 control_pkg/clean: control_pkg/CMakeFiles/control_pkg_geneus.dir/clean
 control_pkg/clean: control_pkg/CMakeFiles/control_pkg_gennodejs.dir/clean
-control_pkg/clean: control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/clean
 control_pkg/clean: control_pkg/CMakeFiles/control_pkg_genpy.dir/clean
-control_pkg/clean: control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/clean
-control_pkg/clean: control_pkg/CMakeFiles/control_pkg.dir/clean
+control_pkg/clean: control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/clean
+control_pkg/clean: control_pkg/CMakeFiles/servo_control_node.dir/clean
 
 .PHONY : control_pkg/clean
 
@@ -235,6 +240,24 @@ rov_start_pkg/clean: rov_start_pkg/CMakeFiles/rov_start_pkg_gencpp.dir/clean
 rov_start_pkg/clean: rov_start_pkg/CMakeFiles/rov_init_node.dir/clean
 
 .PHONY : rov_start_pkg/clean
+
+#=============================================================================
+# Directory level rules for directory vision_pkg
+
+# Recursive "all" directory target.
+vision_pkg/all:
+
+.PHONY : vision_pkg/all
+
+# Recursive "preinstall" directory target.
+vision_pkg/preinstall:
+
+.PHONY : vision_pkg/preinstall
+
+# Recursive "clean" directory target.
+vision_pkg/clean:
+
+.PHONY : vision_pkg/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir
@@ -886,14 +909,41 @@ headfile_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
 .PHONY : headfile_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
+# Target rules for target control_pkg/CMakeFiles/control_core_node.dir
+
+# All Build rule for target.
+control_pkg/CMakeFiles/control_core_node.dir/all:
+	$(MAKE) -f control_pkg/CMakeFiles/control_core_node.dir/build.make control_pkg/CMakeFiles/control_core_node.dir/depend
+	$(MAKE) -f control_pkg/CMakeFiles/control_core_node.dir/build.make control_pkg/CMakeFiles/control_core_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chao/ROV_code/build/CMakeFiles --progress-num=3,4 "Built target control_core_node"
+.PHONY : control_pkg/CMakeFiles/control_core_node.dir/all
+
+# Build rule for subdir invocation for target.
+control_pkg/CMakeFiles/control_core_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chao/ROV_code/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/control_core_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chao/ROV_code/build/CMakeFiles 0
+.PHONY : control_pkg/CMakeFiles/control_core_node.dir/rule
+
+# Convenience name for target.
+control_core_node: control_pkg/CMakeFiles/control_core_node.dir/rule
+
+.PHONY : control_core_node
+
+# clean rule for target.
+control_pkg/CMakeFiles/control_core_node.dir/clean:
+	$(MAKE) -f control_pkg/CMakeFiles/control_core_node.dir/build.make control_pkg/CMakeFiles/control_core_node.dir/clean
+.PHONY : control_pkg/CMakeFiles/control_core_node.dir/clean
+
+#=============================================================================
 # Target rules for target control_pkg/CMakeFiles/control_pkg_generate_messages.dir
 
 # All Build rule for target.
+control_pkg/CMakeFiles/control_pkg_generate_messages.dir/all: control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/all
 control_pkg/CMakeFiles/control_pkg_generate_messages.dir/all: control_pkg/CMakeFiles/control_pkg_generate_messages_nodejs.dir/all
 control_pkg/CMakeFiles/control_pkg_generate_messages.dir/all: control_pkg/CMakeFiles/control_pkg_generate_messages_eus.dir/all
 control_pkg/CMakeFiles/control_pkg_generate_messages.dir/all: control_pkg/CMakeFiles/control_pkg_generate_messages_lisp.dir/all
 control_pkg/CMakeFiles/control_pkg_generate_messages.dir/all: control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/all
-control_pkg/CMakeFiles/control_pkg_generate_messages.dir/all: control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/all
 	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages.dir/depend
 	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chao/ROV_code/build/CMakeFiles --progress-num= "Built target control_pkg_generate_messages"
@@ -942,6 +992,34 @@ _control_pkg_generate_messages_check_deps_servo_control: control_pkg/CMakeFiles/
 control_pkg/CMakeFiles/_control_pkg_generate_messages_check_deps_servo_control.dir/clean:
 	$(MAKE) -f control_pkg/CMakeFiles/_control_pkg_generate_messages_check_deps_servo_control.dir/build.make control_pkg/CMakeFiles/_control_pkg_generate_messages_check_deps_servo_control.dir/clean
 .PHONY : control_pkg/CMakeFiles/_control_pkg_generate_messages_check_deps_servo_control.dir/clean
+
+#=============================================================================
+# Target rules for target control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir
+
+# All Build rule for target.
+control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/all: headfile_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/all: control_pkg/CMakeFiles/_control_pkg_generate_messages_check_deps_servo_control.dir/all
+	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/depend
+	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chao/ROV_code/build/CMakeFiles --progress-num=5 "Built target control_pkg_generate_messages_cpp"
+.PHONY : control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chao/ROV_code/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chao/ROV_code/build/CMakeFiles 0
+.PHONY : control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+control_pkg_generate_messages_cpp: control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/rule
+
+.PHONY : control_pkg_generate_messages_cpp
+
+# clean rule for target.
+control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/clean:
+	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/clean
+.PHONY : control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/clean
 
 #=============================================================================
 # Target rules for target control_pkg/CMakeFiles/control_pkg_gencpp.dir
@@ -1136,6 +1214,33 @@ control_pkg/CMakeFiles/control_pkg_gennodejs.dir/clean:
 .PHONY : control_pkg/CMakeFiles/control_pkg_gennodejs.dir/clean
 
 #=============================================================================
+# Target rules for target control_pkg/CMakeFiles/control_pkg_genpy.dir
+
+# All Build rule for target.
+control_pkg/CMakeFiles/control_pkg_genpy.dir/all: control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/all
+	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_genpy.dir/build.make control_pkg/CMakeFiles/control_pkg_genpy.dir/depend
+	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_genpy.dir/build.make control_pkg/CMakeFiles/control_pkg_genpy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chao/ROV_code/build/CMakeFiles --progress-num= "Built target control_pkg_genpy"
+.PHONY : control_pkg/CMakeFiles/control_pkg_genpy.dir/all
+
+# Build rule for subdir invocation for target.
+control_pkg/CMakeFiles/control_pkg_genpy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chao/ROV_code/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/control_pkg_genpy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chao/ROV_code/build/CMakeFiles 0
+.PHONY : control_pkg/CMakeFiles/control_pkg_genpy.dir/rule
+
+# Convenience name for target.
+control_pkg_genpy: control_pkg/CMakeFiles/control_pkg_genpy.dir/rule
+
+.PHONY : control_pkg_genpy
+
+# clean rule for target.
+control_pkg/CMakeFiles/control_pkg_genpy.dir/clean:
+	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_genpy.dir/build.make control_pkg/CMakeFiles/control_pkg_genpy.dir/clean
+.PHONY : control_pkg/CMakeFiles/control_pkg_genpy.dir/clean
+
+#=============================================================================
 # Target rules for target control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir
 
 # All Build rule for target.
@@ -1164,86 +1269,31 @@ control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/clean:
 .PHONY : control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target control_pkg/CMakeFiles/control_pkg_genpy.dir
+# Target rules for target control_pkg/CMakeFiles/servo_control_node.dir
 
 # All Build rule for target.
-control_pkg/CMakeFiles/control_pkg_genpy.dir/all: control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir/all
-	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_genpy.dir/build.make control_pkg/CMakeFiles/control_pkg_genpy.dir/depend
-	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_genpy.dir/build.make control_pkg/CMakeFiles/control_pkg_genpy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chao/ROV_code/build/CMakeFiles --progress-num= "Built target control_pkg_genpy"
-.PHONY : control_pkg/CMakeFiles/control_pkg_genpy.dir/all
+control_pkg/CMakeFiles/servo_control_node.dir/all:
+	$(MAKE) -f control_pkg/CMakeFiles/servo_control_node.dir/build.make control_pkg/CMakeFiles/servo_control_node.dir/depend
+	$(MAKE) -f control_pkg/CMakeFiles/servo_control_node.dir/build.make control_pkg/CMakeFiles/servo_control_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chao/ROV_code/build/CMakeFiles --progress-num=29,30 "Built target servo_control_node"
+.PHONY : control_pkg/CMakeFiles/servo_control_node.dir/all
 
 # Build rule for subdir invocation for target.
-control_pkg/CMakeFiles/control_pkg_genpy.dir/rule: cmake_check_build_system
+control_pkg/CMakeFiles/servo_control_node.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/chao/ROV_code/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/control_pkg_genpy.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/servo_control_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/chao/ROV_code/build/CMakeFiles 0
-.PHONY : control_pkg/CMakeFiles/control_pkg_genpy.dir/rule
+.PHONY : control_pkg/CMakeFiles/servo_control_node.dir/rule
 
 # Convenience name for target.
-control_pkg_genpy: control_pkg/CMakeFiles/control_pkg_genpy.dir/rule
+servo_control_node: control_pkg/CMakeFiles/servo_control_node.dir/rule
 
-.PHONY : control_pkg_genpy
-
-# clean rule for target.
-control_pkg/CMakeFiles/control_pkg_genpy.dir/clean:
-	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_genpy.dir/build.make control_pkg/CMakeFiles/control_pkg_genpy.dir/clean
-.PHONY : control_pkg/CMakeFiles/control_pkg_genpy.dir/clean
-
-#=============================================================================
-# Target rules for target control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir
-
-# All Build rule for target.
-control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/all: headfile_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/all: control_pkg/CMakeFiles/_control_pkg_generate_messages_check_deps_servo_control.dir/all
-	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/depend
-	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chao/ROV_code/build/CMakeFiles --progress-num=5 "Built target control_pkg_generate_messages_cpp"
-.PHONY : control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chao/ROV_code/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chao/ROV_code/build/CMakeFiles 0
-.PHONY : control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-control_pkg_generate_messages_cpp: control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/rule
-
-.PHONY : control_pkg_generate_messages_cpp
+.PHONY : servo_control_node
 
 # clean rule for target.
-control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/clean:
-	$(MAKE) -f control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/build.make control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/clean
-.PHONY : control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target control_pkg/CMakeFiles/control_pkg.dir
-
-# All Build rule for target.
-control_pkg/CMakeFiles/control_pkg.dir/all:
-	$(MAKE) -f control_pkg/CMakeFiles/control_pkg.dir/build.make control_pkg/CMakeFiles/control_pkg.dir/depend
-	$(MAKE) -f control_pkg/CMakeFiles/control_pkg.dir/build.make control_pkg/CMakeFiles/control_pkg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chao/ROV_code/build/CMakeFiles --progress-num=3,4 "Built target control_pkg"
-.PHONY : control_pkg/CMakeFiles/control_pkg.dir/all
-
-# Build rule for subdir invocation for target.
-control_pkg/CMakeFiles/control_pkg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chao/ROV_code/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 control_pkg/CMakeFiles/control_pkg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chao/ROV_code/build/CMakeFiles 0
-.PHONY : control_pkg/CMakeFiles/control_pkg.dir/rule
-
-# Convenience name for target.
-control_pkg: control_pkg/CMakeFiles/control_pkg.dir/rule
-
-.PHONY : control_pkg
-
-# clean rule for target.
-control_pkg/CMakeFiles/control_pkg.dir/clean:
-	$(MAKE) -f control_pkg/CMakeFiles/control_pkg.dir/build.make control_pkg/CMakeFiles/control_pkg.dir/clean
-.PHONY : control_pkg/CMakeFiles/control_pkg.dir/clean
+control_pkg/CMakeFiles/servo_control_node.dir/clean:
+	$(MAKE) -f control_pkg/CMakeFiles/servo_control_node.dir/build.make control_pkg/CMakeFiles/servo_control_node.dir/clean
+.PHONY : control_pkg/CMakeFiles/servo_control_node.dir/clean
 
 #=============================================================================
 # Target rules for target rov_start_pkg/CMakeFiles/camera_init_node.dir
@@ -1279,7 +1329,7 @@ rov_start_pkg/CMakeFiles/camera_init_node.dir/clean:
 rov_start_pkg/CMakeFiles/servo_init_node.dir/all:
 	$(MAKE) -f rov_start_pkg/CMakeFiles/servo_init_node.dir/build.make rov_start_pkg/CMakeFiles/servo_init_node.dir/depend
 	$(MAKE) -f rov_start_pkg/CMakeFiles/servo_init_node.dir/build.make rov_start_pkg/CMakeFiles/servo_init_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chao/ROV_code/build/CMakeFiles --progress-num=29,30 "Built target servo_init_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chao/ROV_code/build/CMakeFiles --progress-num=31,32 "Built target servo_init_node"
 .PHONY : rov_start_pkg/CMakeFiles/servo_init_node.dir/all
 
 # Build rule for subdir invocation for target.

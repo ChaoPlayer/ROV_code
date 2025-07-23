@@ -61,8 +61,11 @@
 /home/chao/ROV_code/build/control_pkg/CMakeFiles/list_install_components.dir
 /home/chao/ROV_code/build/control_pkg/CMakeFiles/rebuild_cache.dir
 /home/chao/ROV_code/build/control_pkg/CMakeFiles/edit_cache.dir
+/home/chao/ROV_code/build/control_pkg/CMakeFiles/control_core_node.dir
 /home/chao/ROV_code/build/control_pkg/CMakeFiles/control_pkg_generate_messages.dir
 /home/chao/ROV_code/build/control_pkg/CMakeFiles/_control_pkg_generate_messages_check_deps_servo_control.dir
+/home/chao/ROV_code/build/control_pkg/CMakeFiles/install.dir
+/home/chao/ROV_code/build/control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir
 /home/chao/ROV_code/build/control_pkg/CMakeFiles/control_pkg_gencpp.dir
 /home/chao/ROV_code/build/control_pkg/CMakeFiles/install/strip.dir
 /home/chao/ROV_code/build/control_pkg/CMakeFiles/control_pkg_generate_messages_nodejs.dir
@@ -72,11 +75,9 @@
 /home/chao/ROV_code/build/control_pkg/CMakeFiles/control_pkg_geneus.dir
 /home/chao/ROV_code/build/control_pkg/CMakeFiles/test.dir
 /home/chao/ROV_code/build/control_pkg/CMakeFiles/control_pkg_gennodejs.dir
-/home/chao/ROV_code/build/control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir
 /home/chao/ROV_code/build/control_pkg/CMakeFiles/control_pkg_genpy.dir
-/home/chao/ROV_code/build/control_pkg/CMakeFiles/install.dir
-/home/chao/ROV_code/build/control_pkg/CMakeFiles/control_pkg_generate_messages_cpp.dir
-/home/chao/ROV_code/build/control_pkg/CMakeFiles/control_pkg.dir
+/home/chao/ROV_code/build/control_pkg/CMakeFiles/control_pkg_generate_messages_py.dir
+/home/chao/ROV_code/build/control_pkg/CMakeFiles/servo_control_node.dir
 /home/chao/ROV_code/build/rov_start_pkg/CMakeFiles/install/strip.dir
 /home/chao/ROV_code/build/rov_start_pkg/CMakeFiles/install/local.dir
 /home/chao/ROV_code/build/rov_start_pkg/CMakeFiles/rebuild_cache.dir
@@ -99,3 +100,10 @@
 /home/chao/ROV_code/build/rov_start_pkg/CMakeFiles/install.dir
 /home/chao/ROV_code/build/rov_start_pkg/CMakeFiles/rov_start_pkg_gencpp.dir
 /home/chao/ROV_code/build/rov_start_pkg/CMakeFiles/rov_init_node.dir
+/home/chao/ROV_code/build/vision_pkg/CMakeFiles/install/strip.dir
+/home/chao/ROV_code/build/vision_pkg/CMakeFiles/install/local.dir
+/home/chao/ROV_code/build/vision_pkg/CMakeFiles/install.dir
+/home/chao/ROV_code/build/vision_pkg/CMakeFiles/list_install_components.dir
+/home/chao/ROV_code/build/vision_pkg/CMakeFiles/rebuild_cache.dir
+/home/chao/ROV_code/build/vision_pkg/CMakeFiles/edit_cache.dir
+/home/chao/ROV_code/build/vision_pkg/CMakeFiles/test.dir
