@@ -14,16 +14,6 @@ rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noe
 rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/TwistStamped.h
 rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/TwistWithCovariance.h
 rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/Vector3.h
-rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/Altitude.h
-rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/BatteryStatus.h
-rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/ManualControl.h
-rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/OverrideRCIn.h
-rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/RCIn.h
-rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/RCOut.h
-rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/SetMode.h
-rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/SetModeRequest.h
-rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/SetModeResponse.h
-rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/State.h
 rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/nav_msgs/Odometry.h
 rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 rov_start_pkg/CMakeFiles/rov_init_node.dir/src/rov_init_node.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h

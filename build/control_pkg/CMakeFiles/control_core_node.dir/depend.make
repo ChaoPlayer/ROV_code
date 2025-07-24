@@ -15,16 +15,6 @@ control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/r
 control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/TwistStamped.h
 control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/TwistWithCovariance.h
 control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/Vector3.h
-control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/Altitude.h
-control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/BatteryStatus.h
-control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/ManualControl.h
-control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/OverrideRCIn.h
-control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/RCIn.h
-control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/RCOut.h
-control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/SetMode.h
-control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/SetModeRequest.h
-control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/SetModeResponse.h
-control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/State.h
 control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/nav_msgs/Odometry.h
 control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 control_pkg/CMakeFiles/control_core_node.dir/src/control_core_node.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h
