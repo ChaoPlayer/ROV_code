@@ -101,9 +101,10 @@
 /home/chao/ROV_code/build/rov_start_pkg/CMakeFiles/rov_start_pkg_gencpp.dir
 /home/chao/ROV_code/build/rov_start_pkg/CMakeFiles/rov_init_node.dir
 /home/chao/ROV_code/build/vision_pkg/CMakeFiles/install/strip.dir
-/home/chao/ROV_code/build/vision_pkg/CMakeFiles/install/local.dir
 /home/chao/ROV_code/build/vision_pkg/CMakeFiles/install.dir
 /home/chao/ROV_code/build/vision_pkg/CMakeFiles/list_install_components.dir
 /home/chao/ROV_code/build/vision_pkg/CMakeFiles/rebuild_cache.dir
 /home/chao/ROV_code/build/vision_pkg/CMakeFiles/edit_cache.dir
 /home/chao/ROV_code/build/vision_pkg/CMakeFiles/test.dir
+/home/chao/ROV_code/build/vision_pkg/CMakeFiles/install/local.dir
+/home/chao/ROV_code/build/vision_pkg/CMakeFiles/img_enhance_node.dir

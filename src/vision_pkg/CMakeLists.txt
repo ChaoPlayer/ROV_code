@@ -10,7 +10,9 @@ project(vision_pkg)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
+  headfile_pkg
 )
+find_package(OpenCV REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -117,8 +119,20 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
+  ${CMAKE_CURRENT_SOURCE_DIR}/onnxruntime/include
+)
+link_directories(
+  ${CMAKE_CURRENT_SOURCE_DIR}/onnxruntime/lib
 )
 
+add_executable(img_enhance_node src/img_enhance_node.cpp)
+target_link_libraries(
+  img_enhance_node
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBS}
+  onnxruntime
+)
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/vision_pkg.cpp

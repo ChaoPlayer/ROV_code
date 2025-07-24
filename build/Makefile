@@ -856,6 +856,19 @@ rov_init_node/fast:
 	$(MAKE) -f rov_start_pkg/CMakeFiles/rov_init_node.dir/build.make rov_start_pkg/CMakeFiles/rov_init_node.dir/build
 .PHONY : rov_init_node/fast
 
+#=============================================================================
+# Target rules for targets named img_enhance_node
+
+# Build rule for target.
+img_enhance_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 img_enhance_node
+.PHONY : img_enhance_node
+
+# fast build rule for target.
+img_enhance_node/fast:
+	$(MAKE) -f vision_pkg/CMakeFiles/img_enhance_node.dir/build.make vision_pkg/CMakeFiles/img_enhance_node.dir/build
+.PHONY : img_enhance_node/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -922,6 +935,7 @@ help:
 	@echo "... rov_start_pkg_genpy"
 	@echo "... rov_start_pkg_gencpp"
 	@echo "... rov_init_node"
+	@echo "... img_enhance_node"
 .PHONY : help
 
 

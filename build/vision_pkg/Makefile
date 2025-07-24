@@ -68,18 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -135,6 +123,18 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/chao/ROV_code/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/chao/ROV_code/build/CMakeFiles /home/chao/ROV_code/build/vision_pkg/CMakeFiles/progress.marks
@@ -167,6 +167,48 @@ depend:
 	cd /home/chao/ROV_code/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+vision_pkg/CMakeFiles/img_enhance_node.dir/rule:
+	cd /home/chao/ROV_code/build && $(MAKE) -f CMakeFiles/Makefile2 vision_pkg/CMakeFiles/img_enhance_node.dir/rule
+.PHONY : vision_pkg/CMakeFiles/img_enhance_node.dir/rule
+
+# Convenience name for target.
+img_enhance_node: vision_pkg/CMakeFiles/img_enhance_node.dir/rule
+
+.PHONY : img_enhance_node
+
+# fast build rule for target.
+img_enhance_node/fast:
+	cd /home/chao/ROV_code/build && $(MAKE) -f vision_pkg/CMakeFiles/img_enhance_node.dir/build.make vision_pkg/CMakeFiles/img_enhance_node.dir/build
+.PHONY : img_enhance_node/fast
+
+src/img_enhance_node.o: src/img_enhance_node.cpp.o
+
+.PHONY : src/img_enhance_node.o
+
+# target to build an object file
+src/img_enhance_node.cpp.o:
+	cd /home/chao/ROV_code/build && $(MAKE) -f vision_pkg/CMakeFiles/img_enhance_node.dir/build.make vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o
+.PHONY : src/img_enhance_node.cpp.o
+
+src/img_enhance_node.i: src/img_enhance_node.cpp.i
+
+.PHONY : src/img_enhance_node.i
+
+# target to preprocess a source file
+src/img_enhance_node.cpp.i:
+	cd /home/chao/ROV_code/build && $(MAKE) -f vision_pkg/CMakeFiles/img_enhance_node.dir/build.make vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.i
+.PHONY : src/img_enhance_node.cpp.i
+
+src/img_enhance_node.s: src/img_enhance_node.cpp.s
+
+.PHONY : src/img_enhance_node.s
+
+# target to generate assembly for a file
+src/img_enhance_node.cpp.s:
+	cd /home/chao/ROV_code/build && $(MAKE) -f vision_pkg/CMakeFiles/img_enhance_node.dir/build.make vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.s
+.PHONY : src/img_enhance_node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -174,12 +216,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... install/local"
+	@echo "... img_enhance_node"
+	@echo "... src/img_enhance_node.o"
+	@echo "... src/img_enhance_node.i"
+	@echo "... src/img_enhance_node.s"
 .PHONY : help
 
 
