@@ -7,6 +7,7 @@ vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /home/cha
 vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /home/chao/ROV_code/src/vision_pkg/onnxruntime/include/onnxruntime_cxx_inline.h
 vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /home/chao/ROV_code/src/vision_pkg/onnxruntime/include/onnxruntime_float16.h
 vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /home/chao/ROV_code/src/vision_pkg/src/img_enhance_node.cpp
+vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /home/chao/ROV_code/src/vision_pkg/src/img_manager.h
 vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/Point.h
 vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/Pose.h
 vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/PoseStamped.h
