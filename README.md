@@ -3,6 +3,26 @@
 #### 1.删除Build目录
 #### 2.执行catkin_make进行编译
 #### 3.执行source devel/setup.bash，否则ros会找不到包
+### 若是新配置的ubuntu系统，可在终端执行以下命令对环境一键配置：
+sudo apt update
+sudo apt install -y \
+  ros-noetic-desktop-full \           # ROS Noetic 全量安装（含rviz、roscore、常用工具等）
+  ros-noetic-mavros \                 # MAVROS 主包
+  ros-noetic-mavros-extras \         # MAVROS 附加插件
+  ros-noetic-serial \                # ROS 串口通信包
+  ros-noetic-geographic-msgs \       # MAVROS 所需消息定义
+  geographiclib-tools \              # 地理坐标库工具
+  libserial-dev \                    # 系统级 C++ 串口库（非 ROS 专用）
+  build-essential \                  # g++, make 等开发工具
+  cmake \                            # 构建系统
+  git \                              # Git 版本控制
+  code \                             # Visual Studio Code 编辑器（需先配置微软源）
+  python3-rosdep \                   # rosdep 依赖管理
+  python3-rosinstall \               # ROS workspace 安装工具
+  python3-rosinstall-generator \
+  python3-wstool \
+  python3-catkin-tools
+
 
 ## 二、总体架构
 ### 1.启动初始化功能包：rov_start_pkg
