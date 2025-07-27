@@ -4,6 +4,7 @@
 #### 2.执行catkin_make进行编译
 #### 3.执行source devel/setup.bash，否则ros会找不到包
 ### 若是新配置的ubuntu系统，可在终端执行以下命令对环境一键配置：
+```bash
 sudo apt update
 sudo apt install -y \
   ros-noetic-desktop-full \           # ROS Noetic 全量安装（含rviz、roscore、常用工具等）
@@ -23,7 +24,7 @@ sudo apt install -y \
   python3-wstool \
   python3-catkin-tools
 
-
+```
 ## 二、总体架构
 ### 1.启动初始化功能包：rov_start_pkg
     这个包的作用是检查各个硬件与机载电脑的连接情况，由rov_init_node作为中控，向主题init_check不断发送自检请求，再订阅init_check_re获取各个节点的自检情况。最终的自检情况将被存储在一个map中，即rov_start_node.h的status_map中
