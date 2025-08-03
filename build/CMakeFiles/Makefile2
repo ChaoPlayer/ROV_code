@@ -55,6 +55,7 @@ CMAKE_BINARY_DIR = /home/chao/ROV_code/build
 # The main recursive "all" target.
 all: gtest/all
 all: headfile_pkg/all
+all: ai_delpoy_pkg/all
 all: control_pkg/all
 all: rov_start_pkg/all
 all: vision_pkg/all
@@ -64,6 +65,7 @@ all: vision_pkg/all
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
 preinstall: headfile_pkg/preinstall
+preinstall: ai_delpoy_pkg/preinstall
 preinstall: control_pkg/preinstall
 preinstall: rov_start_pkg/preinstall
 preinstall: vision_pkg/preinstall
@@ -78,11 +80,30 @@ clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: headfile_pkg/clean
+clean: ai_delpoy_pkg/clean
 clean: control_pkg/clean
 clean: rov_start_pkg/clean
 clean: vision_pkg/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory ai_delpoy_pkg
+
+# Recursive "all" directory target.
+ai_delpoy_pkg/all:
+
+.PHONY : ai_delpoy_pkg/all
+
+# Recursive "preinstall" directory target.
+ai_delpoy_pkg/preinstall:
+
+.PHONY : ai_delpoy_pkg/preinstall
+
+# Recursive "clean" directory target.
+ai_delpoy_pkg/clean:
+
+.PHONY : ai_delpoy_pkg/clean
 
 #=============================================================================
 # Directory level rules for directory control_pkg

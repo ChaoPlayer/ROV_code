@@ -14,7 +14,8 @@
                 "${workspaceFolder}/devel/include",
                 "/opt/ros/noetic/include",
                 "${workspaceFolder}/src/vision_pkg/onnxruntime/include",
-                "/usr/include/opencv4"
+                "/usr/include/opencv4",
+                "${workspaceFolder}/src/vision_pkg/src"
             ],
             "name": "ROS",
             "intelliSenseMode": "gcc-x64",

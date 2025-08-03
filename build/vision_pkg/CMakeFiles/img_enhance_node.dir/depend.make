@@ -17,6 +17,16 @@ vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/
 vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/TwistStamped.h
 vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/TwistWithCovariance.h
 vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/Vector3.h
+vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/Altitude.h
+vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/BatteryStatus.h
+vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/ManualControl.h
+vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/OverrideRCIn.h
+vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/RCIn.h
+vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/RCOut.h
+vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/SetMode.h
+vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/SetModeRequest.h
+vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/SetModeResponse.h
+vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/mavros_msgs/State.h
 vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/nav_msgs/Odometry.h
 vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 vision_pkg/CMakeFiles/img_enhance_node.dir/src/img_enhance_node.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h

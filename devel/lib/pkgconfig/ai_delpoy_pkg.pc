@@ -1,0 +1,8 @@
+prefix=/home/chao/ROV_code/devel
+
+Name: ai_delpoy_pkg
+Description: Description of ai_delpoy_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

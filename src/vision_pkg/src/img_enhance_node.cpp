@@ -80,7 +80,7 @@ void image_enhance(cv::Mat img_0,Ort::Session& session){
 
     cv::cvtColor(output_img,output_img,cv::COLOR_RGB2BGR);
     output_img.convertTo(output_img,CV_8UC3,255.0);
-    cv::resize(output_img,output_img,cv::Size(1280,480));
+    cv::resize(output_img,output_img,cv::Size(2048,576));
     cv::imshow("增强后图像",output_img);
 }
 int main(){

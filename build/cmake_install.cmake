@@ -147,6 +147,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/chao/ROV_code/build/gtest/cmake_install.cmake")
   include("/home/chao/ROV_code/build/headfile_pkg/cmake_install.cmake")
+  include("/home/chao/ROV_code/build/ai_delpoy_pkg/cmake_install.cmake")
   include("/home/chao/ROV_code/build/control_pkg/cmake_install.cmake")
   include("/home/chao/ROV_code/build/rov_start_pkg/cmake_install.cmake")
   include("/home/chao/ROV_code/build/vision_pkg/cmake_install.cmake")

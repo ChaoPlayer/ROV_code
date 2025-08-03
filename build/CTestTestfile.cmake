@@ -6,6 +6,7 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("headfile_pkg")
+subdirs("ai_delpoy_pkg")
 subdirs("control_pkg")
 subdirs("rov_start_pkg")
 subdirs("vision_pkg")

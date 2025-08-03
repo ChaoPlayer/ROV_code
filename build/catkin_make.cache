@@ -1,2 +1,2 @@
-control_pkg:headfile_pkg:rov_start_pkg:vision_pkg
+ai_delpoy_pkg:control_pkg:headfile_pkg:rov_start_pkg:vision_pkg
 -DCATKIN_DEVEL_PREFIX=/home/chao/ROV_code/devel -DCMAKE_INSTALL_PREFIX=/home/chao/ROV_code/install -G Unix Makefiles
